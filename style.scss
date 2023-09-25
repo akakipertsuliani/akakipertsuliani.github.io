@@ -12,76 +12,6 @@ body {
     overflow-x: hidden;
 }
 
-#header {
-    width: 100%;
-    height: 10vh;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background: #076f012d;
-
-    .logo {
-        align-self: center;
-        margin-left: 80px;
-        margin-bottom: 10px;
-    }
-
-    #nav-container {
-        margin-left: auto;
-        margin-right: 3.5vw;
-
-        #list-container {
-            display: flex;
-            column-gap: 1vw;
-            list-style: none;
-
-            .list {
-                display: flex;
-                align-items: center;
-
-                .element {
-                    text-decoration: none;
-                    font-family: monospace, sans-serif;
-                    font-size: 1.25rem;
-                    font-weight: 700;
-                    color: #FFF;
-                    padding: 5px 15px;
-                    border: 2px solid transparent;
-                    border-radius: 15px;
-                    transition: color 0.3s;
-
-                    @media screen and (min-width: 768px) {
-                        &:hover {
-                            color: #3DC507;
-                        }
-
-                        &::after {
-                            content: '';
-                            display: block;
-                            background-color: #D19106;
-                            height: 3px;
-                            width: 0;
-                            margin-inline: auto;
-                            border-radius: 1.5px;
-                            transition: width 0.3s;
-                        }
-
-                        &:hover::after {
-                            width: 100%;
-                        }
-                    }
-
-                    &:active {
-                        border: 2px solid #54038a;
-                    }
-
-                }
-            }
-
-        }
-    }
-}
-
 .section1 {
     width: 100%;
     height: 90vh;
@@ -114,20 +44,27 @@ body {
             .skill-texts {
                 position: relative;
                 display: flex;
+                align-items: center;
                 color: $defaultTextColor;
                 font-family: $defaultFont;
                 font-size: 2rem;
-                
+
                 .skill-text-conatienr {
                     display: flex;
                     flex-direction: column;
+                    align-items: center;
                     height: 40px;
                     overflow: hidden;
-    
+
                     .skill-text {
-                        color: red;
+                        font-size: 2rem;
+                        background: linear-gradient(to right, #f5af19, #f12711);
+                        -webkit-background-clip: text;
+                        background-clip: text;
+                        color: transparent;
                         display: flex;
                         flex-direction: column;
+                        font-weight: 700;
                         position: relative;
                         margin-bottom: 35px;
                         animation: identifier 12s infinite;
@@ -142,20 +79,95 @@ body {
 
 }
 
+/* about Page */
 
+.about-section1 {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    #about-text-container {
+        max-width: 90%;
+        text-align: center;
+
+        * {
+            border-radius: 20px;
+            font-weight: 700;
+            transition: 0.3s;
+
+            &:hover {
+                transform: scale(1.05);
+                box-shadow: 0 0 10px 10px #001C77;
+            }
+        }
+
+        .header {
+            font-size: 24px;
+            font-weight: bold;
+            color: #FFF;
+        }
+
+        .paragraph {
+            font-size: 18px;
+            color: #F0F0F0;
+            margin: 20px 0;
+        }
+
+        .emphasis {
+            font-size: 20px;
+            color: #FF5722;
+        }
+
+        .emoji {
+            font-size: 24px;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+
+    }
+
+    #svg-animation {
+        position: absolute;
+        z-index: -1;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        filter: blur(20px);
+    }
+}
 
 @keyframes identifier {
     0% {
-        bottom: 0%;
-    }
-    25% {
-        bottom: 70%;
-    }
-    50% {
-        bottom: 390%;
-    }
-    100% {
-        bottom: 0%;
+        bottom: -2px;
     }
 
+    30% {
+        bottom: -2px;
+    }
+
+    35% {
+        bottom: 70px;
+    }
+
+    65% {
+        bottom: 70px;
+    }
+
+    70% {
+        bottom: 141px;
+    }
+
+    80% {
+        bottom: 141px;
+    } 
+
+    90% {
+        bottom: 216px;
+    }
+
+    100% {
+        bottom: 216px;
+    }
 }

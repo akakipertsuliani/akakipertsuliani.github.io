@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/facicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="style.css">
     <title>Service</title>
 </head>
 <body>
     <header id="header">
-        <img src="img/logo.svg" alt="Akaki" class="logo" width="8%">
+        <img src="img/logo.svg" alt="Akaki" id="logo">
         <nav id="nav-container">
             <ul id="list-container">
                 <li class="list"><a href="index.html" class="element">Home</a></li>
@@ -19,5 +20,12 @@
             </ul>
         </nav>
     </header>
+
+    <script>
+        document.getElementById("logo").addEventListener("click", () => {
+            location.href = "index.html";
+        })
+    </script>
+
 </body>
 </html>
