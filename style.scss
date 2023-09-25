@@ -3,9 +3,13 @@
     padding: 0;
 }
 
+$defaultFont: monospace;
+$defaultTextColor: #FFF;
+
 body {
     width: min(100vw, 1960px);
     background: #062052;
+    overflow-x: hidden;
 }
 
 #header {
@@ -14,7 +18,13 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background: #06258a2d;
+    background: #076f012d;
+
+    .logo {
+        align-self: center;
+        margin-left: 80px;
+        margin-bottom: 10px;
+    }
 
     #nav-container {
         margin-left: auto;
@@ -28,6 +38,7 @@ body {
             .list {
                 display: flex;
                 align-items: center;
+
                 .element {
                     text-decoration: none;
                     font-family: monospace, sans-serif;
@@ -38,7 +49,7 @@ body {
                     border: 2px solid transparent;
                     border-radius: 15px;
                     transition: color 0.3s;
-                    
+
                     @media screen and (min-width: 768px) {
                         &:hover {
                             color: #3DC507;
@@ -68,6 +79,83 @@ body {
             }
 
         }
+    }
+}
+
+.section1 {
+    width: 100%;
+    height: 90vh;
+    padding-inline: 20vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .wellcome-text-container {
+        width: 40%;
+        height: 50%;
+
+        .container {
+            margin-top: 5vh;
+            margin-left: 5vh;
+
+            h1 {
+                color: $defaultTextColor;
+                font-family: $defaultFont;
+                font-size: 3rem;
+            }
+
+            h2 {
+                color: $defaultTextColor;
+                font-family: $defaultFont;
+                font-size: 2rem;
+            }
+
+
+            .skill-texts {
+                position: relative;
+                display: flex;
+                color: $defaultTextColor;
+                font-family: $defaultFont;
+                font-size: 2rem;
+                
+                .skill-text-conatienr {
+                    display: flex;
+                    flex-direction: column;
+                    height: 40px;
+                    overflow: hidden;
+    
+                    .skill-text {
+                        color: red;
+                        display: flex;
+                        flex-direction: column;
+                        position: relative;
+                        margin-bottom: 35px;
+                        animation: identifier 12s infinite;
+                    }
+                }
+            }
+
+
+
+        }
+    }
+
+}
+
+
+
+@keyframes identifier {
+    0% {
+        bottom: 0%;
+    }
+    25% {
+        bottom: 70%;
+    }
+    50% {
+        bottom: 390%;
+    }
+    100% {
+        bottom: 0%;
     }
 
 }

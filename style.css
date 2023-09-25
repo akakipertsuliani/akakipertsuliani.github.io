@@ -6,6 +6,7 @@
 body {
   width: min(100vw, 1960px);
   background: #062052;
+  overflow-x: hidden;
 }
 
 #header {
@@ -14,7 +15,12 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background: rgba(6, 37, 138, 0.1764705882);
+  background: rgba(7, 111, 1, 0.1764705882);
+}
+#header .logo {
+  align-self: center;
+  margin-left: 80px;
+  margin-bottom: 10px;
 }
 #header #nav-container {
   margin-left: auto;
@@ -60,6 +66,69 @@ body {
 }
 #header #nav-container #list-container .list .element:active {
   border: 2px solid #54038a;
+}
+
+.section1 {
+  width: 100%;
+  height: 90vh;
+  padding-inline: 20vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.section1 .wellcome-text-container {
+  width: 40%;
+  height: 50%;
+}
+.section1 .wellcome-text-container .container {
+  margin-top: 5vh;
+  margin-left: 5vh;
+}
+.section1 .wellcome-text-container .container h1 {
+  color: #FFF;
+  font-family: monospace;
+  font-size: 3rem;
+}
+.section1 .wellcome-text-container .container h2 {
+  color: #FFF;
+  font-family: monospace;
+  font-size: 2rem;
+}
+.section1 .wellcome-text-container .container .skill-texts {
+  position: relative;
+  display: flex;
+  color: #FFF;
+  font-family: monospace;
+  font-size: 2rem;
+}
+.section1 .wellcome-text-container .container .skill-texts .skill-text-conatienr {
+  display: flex;
+  flex-direction: column;
+  height: 40px;
+  overflow: hidden;
+}
+.section1 .wellcome-text-container .container .skill-texts .skill-text-conatienr .skill-text {
+  color: red;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 35px;
+  animation: identifier 12s infinite;
+}
+
+@keyframes identifier {
+  0% {
+    bottom: 0%;
+  }
+  25% {
+    bottom: 70%;
+  }
+  50% {
+    bottom: 390%;
+  }
+  100% {
+    bottom: 0%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
