@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 #header {
     width: 100%;
     height: 10vh;
@@ -5,6 +9,9 @@
     justify-content: space-around;
     align-items: center;
     background: #076F012D;
+    position: fixed;
+    z-index: 999;
+    color: #9222E7;
 }
 
 #header #logo {
@@ -13,7 +20,6 @@
     margin-bottom: 10px;
     transition: transform 0.3s;
     width: 7.5%;
-    cursor: pointer;
 }
 
 #header #logo:hover {
