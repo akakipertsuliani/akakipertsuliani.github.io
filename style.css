@@ -9,34 +9,46 @@ body {
   overflow-x: hidden;
 }
 
-#section1 {
+.wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* about Page */
+  /* Service page */
+}
+.wrapper #section1 {
   width: 100%;
   height: 100vh;
-  padding-inline: 20vh;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
 }
-#section1 .wellcome-text-container {
+.wrapper #section1 .wellcome-text-container {
   width: 40%;
   height: 50%;
+  margin-top: auto;
+  margin-bottom: 15vh;
 }
-#section1 .wellcome-text-container .container {
-  margin-top: 5vh;
-  margin-left: 20vh;
+.wrapper #section1 .wellcome-text-container .container {
   transform: scale(1.6);
 }
-#section1 .wellcome-text-container .container h1 {
-  color: #FFF;
+.wrapper #section1 .wellcome-text-container .container h1 {
+  background: linear-gradient(90deg, #833AB4 0%, #FD1D1D 45%, #FCB045 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-family: monospace;
-  font-size: 3rem;
+  font-size: 2.1rem;
+  background-size: 400%;
+  animation: gradient-animation 2s ease-in-out infinite;
 }
-#section1 .wellcome-text-container .container h2 {
+.wrapper #section1 .wellcome-text-container .container h2 {
   color: #FFF;
   font-family: monospace;
   font-size: 2rem;
 }
-#section1 .wellcome-text-container .container .skill-texts {
+.wrapper #section1 .wellcome-text-container .container .skill-texts {
   position: relative;
   display: flex;
   align-items: center;
@@ -44,14 +56,14 @@ body {
   font-family: monospace;
   font-size: 2rem;
 }
-#section1 .wellcome-text-container .container .skill-texts .skill-text-conatienr {
+.wrapper #section1 .wellcome-text-container .container .skill-texts .skill-text-conatienr {
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 40px;
   overflow: hidden;
 }
-#section1 .wellcome-text-container .container .skill-texts .skill-text-conatienr .skill-text {
+.wrapper #section1 .wellcome-text-container .container .skill-texts .skill-text-conatienr .skill-text {
   font-size: 2rem;
   background: linear-gradient(to right, #f5af19, #f12711);
   -webkit-background-clip: text;
@@ -64,9 +76,7 @@ body {
   margin-bottom: 35px;
   animation: slide-animation 8s linear infinite;
 }
-
-/* about Page */
-#about-section1 {
+.wrapper #about {
   width: 100%;
   height: 100vh;
   display: flex;
@@ -74,11 +84,11 @@ body {
   align-items: center;
   position: relative;
 }
-#about-section1 #about-text-container {
+.wrapper #about #about-text-container {
   max-width: 90%;
   text-align: center;
 }
-#about-section1 #about-text-container .header {
+.wrapper #about #about-text-container .header {
   font-size: 24px;
   font-weight: bold;
   color: #FFF;
@@ -87,11 +97,11 @@ body {
   transition: 0.3s;
   padding: 10px;
 }
-#about-section1 #about-text-container .header:hover {
+.wrapper #about #about-text-container .header:hover {
   transform: scale(1.05);
   box-shadow: 0 0 10px 10px #047700;
 }
-#about-section1 #about-text-container .paragraph {
+.wrapper #about #about-text-container .paragraph {
   font-size: 18px;
   color: #F0F0F0;
   margin: 20px 0;
@@ -100,11 +110,11 @@ body {
   transition: 0.3s;
   padding: 10px;
 }
-#about-section1 #about-text-container .paragraph:hover {
+.wrapper #about #about-text-container .paragraph:hover {
   transform: scale(1.05);
   box-shadow: 0 0 10px 10px #047700;
 }
-#about-section1 #about-text-container .emphasis {
+.wrapper #about #about-text-container .emphasis {
   font-size: 20px;
   color: #FF5722;
   border-radius: 20px;
@@ -112,16 +122,16 @@ body {
   transition: 0.3s;
   padding: 10px;
 }
-#about-section1 #about-text-container .emphasis:hover {
+.wrapper #about #about-text-container .emphasis:hover {
   transform: scale(1.05);
   box-shadow: 0 0 10px 10px #047700;
 }
-#about-section1 #about-text-container .emoji {
+.wrapper #about #about-text-container .emoji {
   font-size: 24px;
   margin-right: 8px;
   vertical-align: middle;
 }
-#about-section1 #svg-animation {
+.wrapper #about #svg-animation {
   position: absolute;
   z-index: -1;
   left: 50%;
@@ -130,67 +140,71 @@ body {
   transform: translate(-50%, -50%);
   filter: blur(20px);
 }
-
-/* Service page */
-#service-section {
+.wrapper #service {
   width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#service-section .grid-container {
+.wrapper #service .grid-container {
   display: flex;
   width: 200px, 50%;
-  height: max(200px, 50%);
+  height: min(150px, 50%);
+  flex-wrap: wrap;
 }
 @media screen and (max-width: 768px) {
-  #service-section .grid-container {
+  .wrapper #service .grid-container {
     flex-direction: column;
   }
 }
-#service-section .grid-container .service-container {
+.wrapper #service .grid-container .service-container {
   display: flex;
   flex-direction: column;
-  margin: auto;
-  width: max(200px, 30%);
+  margin: 15px auto auto auto;
+  width: max(200px, 20%);
   height: max(200px, 25%);
-  background: #08A0BB;
+  background: #0575E6;
   border-radius: 20px;
   overflow: hidden;
   transition: 0.3s;
   cursor: pointer;
 }
-#service-section .grid-container .service-container img {
+.wrapper #service .grid-container .service-container img {
   width: 100%;
   height: 50%;
 }
-#service-section .grid-container .service-container p {
+.wrapper #service .grid-container .service-container #paragraph-container {
+  height: 40%;
+  width: 90%;
+  margin-top: 8px;
+  align-self: center;
+}
+.wrapper #service .grid-container .service-container #paragraph-container p {
   color: #FFF;
   font-family: monospace;
   font-weight: 700;
-  font-size: 1.15rem;
+  font-size: 20px;
   text-align: center;
   margin: auto;
-  max-width: 60%;
 }
 @media screen and (min-width: 768px) {
-  #service-section .grid-container .service-container:hover {
+  .wrapper #service .grid-container .service-container:hover {
     transform: scale(1.1);
-    background: #F3675B;
+    background: #FC4A1A;
   }
-  #service-section .grid-container .service-container:active {
+  .wrapper #service .grid-container .service-container:active {
     transform: scale(1);
   }
 }
 @media screen and (max-width: 768px) {
-  #service-section .grid-container .service-container .grid-container {
+  .wrapper #service .grid-container .service-container .grid-container {
     flex-direction: column;
   }
-  #service-section .grid-container .service-container:active {
+  .wrapper #service .grid-container .service-container:active {
     transform: scale(0.9);
   }
-  #service-section .grid-container .service-container p {
+  .wrapper #service .grid-container .service-container p {
     font-size: 0.8rem;
   }
 }
@@ -219,6 +233,17 @@ body {
   }
   100% {
     bottom: 216px;
+  }
+}
+@keyframes gradient-animation {
+  0% {
+    background-position: 0%;
+  }
+  50% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: 0%;
   }
 }
 
