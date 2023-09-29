@@ -15,7 +15,7 @@ body {
   flex-direction: column;
   align-items: center;
   /* about Page */
-  /* Service page */
+  /* skill page */
 }
 .wrapper #section1 {
   position: relative;
@@ -137,21 +137,22 @@ body {
   transform: translate(-50%, -50%);
   filter: blur(20px);
 }
-.wrapper #service {
+.wrapper #skill {
   width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.wrapper #service .grid-container {
+.wrapper #skill .grid-container {
   display: flex;
   width: 200px, 50%;
   height: min(150px, 50%);
   flex-wrap: wrap;
   column-gap: 50px;
 }
-.wrapper #service .grid-container .service-container {
+.wrapper #skill .grid-container .skill-container {
+  position: relative;
   display: flex;
   flex-direction: column;
   margin: 15px auto auto auto;
@@ -163,17 +164,39 @@ body {
   transition: 0.3s;
   cursor: pointer;
 }
-.wrapper #service .grid-container .service-container img {
+.wrapper #skill .grid-container .skill-container .skill-icon-container {
+  position: absolute;
+  right: 10px;
+  width: 130%;
+  z-index: 888;
+  display: flex;
+}
+.wrapper #skill .grid-container .skill-container .skill-icon-container .icon-box {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-left: 20px;
+  background: #FFF;
+}
+.wrapper #skill .grid-container .skill-container .skill-icon-container .icon-box img {
+  height: 80%;
+  width: 80%;
+}
+.wrapper #skill .grid-container .skill-container img {
   width: 100%;
   height: 50%;
 }
-.wrapper #service .grid-container .service-container #paragraph-container {
+.wrapper #skill .grid-container .skill-container #paragraph-container {
   height: 40%;
   width: 90%;
   margin-top: 8px;
   align-self: center;
 }
-.wrapper #service .grid-container .service-container #paragraph-container p {
+.wrapper #skill .grid-container .skill-container #paragraph-container p {
   color: #FFF;
   font-family: monospace;
   font-weight: 700;
@@ -182,19 +205,19 @@ body {
   margin: auto;
 }
 @media screen and (min-width: 768px) {
-  .wrapper #service .grid-container .service-container:hover {
+  .wrapper #skill .grid-container .skill-container:hover {
     transform: scale(1.1);
     background: #FC4A1A;
   }
-  .wrapper #service .grid-container .service-container:active {
+  .wrapper #skill .grid-container .skill-container:active {
     transform: scale(1);
   }
 }
 @media screen and (max-width: 768px) {
-  .wrapper #service .grid-container .service-container:active {
+  .wrapper #skill .grid-container .skill-container:active {
     transform: scale(0.9);
   }
-  .wrapper #service .grid-container .service-container p {
+  .wrapper #skill .grid-container .skill-container p {
     font-size: 0.8rem;
   }
 }
