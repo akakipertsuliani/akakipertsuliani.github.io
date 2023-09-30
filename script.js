@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
         flipflop1 = !flipflop1;
         flipflop2 = true;
         flipflop3 = true;
+        location.href = "#skill";
     });
 
     document.getElementsByClassName("skill-container")[1].addEventListener("click", () => {
@@ -25,6 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
         flipflop2 = !flipflop2;
         flipflop1 = true;
         flipflop3 = true;
+        location.href = "#skill";
     });
 
     document.getElementsByClassName("skill-container")[2].addEventListener("click", () => {
@@ -37,6 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
         flipflop3 = !flipflop3;
         flipflop1 = true;
         flipflop2 = true;
+        location.href = "#skill";
     });
 
 
