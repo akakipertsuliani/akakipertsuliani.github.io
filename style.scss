@@ -163,11 +163,64 @@ body {
     /* skill page */
 
     #skill {
+        position: relative;
         width: 100%;
         height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
+
+        .icon-box {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: visible;
+            margin-left: 20px;
+            background: #FFF;
+            padding: 20px;
+
+            img {
+                height: 80%;
+                width: 80%;
+            }
+        }
+
+        #skill-icon-container1 {
+            position: absolute;
+            top: 200px;
+            left: 60px;
+            width: 40%;
+            opacity: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            transition: 0.5s ease-in-out;
+        }
+
+        #skill-icon-container2 {
+            position: absolute;
+            top: 200px;
+            left: 50%;
+            transform: translateX(-8%);
+            width: 130%;
+            opacity: 0;
+            display: flex;
+            transition: 0.5s ease-in-out;
+        }
+ 
+        #skill-icon-container3 {
+            position: absolute;
+            top: 200px;
+            left: 70%;
+            transform: translateX(-8%);
+            width: 130%;
+            opacity: 0;
+            display: flex;
+            transition: 0.5s ease-in-out;
+        }
 
         .grid-container {
             display: flex;
@@ -175,6 +228,7 @@ body {
             height: min(150px, 50%);
             flex-wrap: wrap;
             column-gap: 50px;
+            margin-top: 210px;
 
             .skill-container {
                 position: relative;
@@ -188,31 +242,6 @@ body {
                 overflow: hidden;
                 transition: 0.3s;
                 cursor: pointer;
-
-                .skill-icon-container {
-                    position: absolute;
-                    right: 10px;
-                    width: 130%;
-                    z-index: 888;
-                    display: flex;
-
-                    .icon-box {
-                        width: 80px;
-                        height: 80px;
-                        border-radius: 50%;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        overflow: hidden;
-                        margin-left: 20px;
-                        background: #FFF;
-
-                        img {
-                            height: 80%;
-                            width: 80%;
-                        }
-                    }
-                }
 
                 img {
                     width: 100%;
