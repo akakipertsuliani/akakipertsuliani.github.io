@@ -4,6 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/kute.js@2.2.4/dist/kute.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" href="img/facicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="style.css">
@@ -28,7 +32,7 @@
             <img id="section1background" src="img/section1BackgroundElement.svg" alt="svg">
             <div class="wellcome-text-container">
                 <div class="container">
-                    <h1>Hello, World</h1>
+                    <h1 id="wellcome-text"></h1>
                     <h2>My name is Akaki</h2>
                     <div class="skill-texts">
                         <h3>I am</h3>&nbsp;
@@ -42,7 +46,6 @@
                     </div>
                 </div>
             </div>
-            <img src="" alt="Akaki" id="my-image">
         </section>
 
 
@@ -139,20 +142,25 @@
         </section>
 
         <footer id="contact">
-            <div class="contact-container">
-                <img src="img/github.png" alt="github">
-                <p>Github</p>
-                <p>akakipertsuliani</p>
+            <div id="footer-container1">
+                <div class="contact-text-container">
+                    <h1>Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope" style="color: #9141AC;"></i>akaki@kopitnari.net</p>
+                    <div class="personal-contact">
+                        <a href="https://github.com/akakipertsuliani" target="_blank"><i class="fa-brands fa-github" style="color: #FFF;"></i></a>
+                        <a href="https://facebook.com/akaki.ferculiani.12" target="_blank"><i class="fa-brands fa-facebook" style="color: #FFF;"></i></a>
+                    </div>
+                </div>
             </div>
-            <div class="contact-container">
-                <img src="img/gmail.png" alt="gmail">
-                <p>Gmail</p>
-                <p>akaki@kopitnari.net</p>
-            </div>
-            <div class="contact-container">
-                <img src="img/facebook.png" alt="facebook">
-                <p>Facebook</p>
-                <p>Akaki Ferculiani</p>
+            <div id="footer-container2">
+                <div class="form-container">
+                    <form action="">
+                        <input type="text" id="name-field" class="input-field" placeholder="Your Name" required>
+                        <input type="email" id="email-field" class="input-field" placeholder="Your Email" required>
+                        <textarea id="message-field" class="input-field" rows="10" placeholder="Your Message" required></textarea>
+                        <input type="submit" id="submit-button" value="Send">
+                    </form>
+                </div>
             </div>
         </footer>
     </div>

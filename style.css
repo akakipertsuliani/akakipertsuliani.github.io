@@ -40,6 +40,9 @@ body {
   margin-bottom: 15vh;
 }
 .wrapper #section1 .wellcome-text-container .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   transform: scale(1.6);
 }
 .wrapper #section1 .wellcome-text-container .container h1 {
@@ -164,7 +167,8 @@ body {
 .wrapper #skill #skill-icon-container1 {
   position: absolute;
   top: 200px;
-  left: 60px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 40%;
   opacity: 0;
   display: flex;
@@ -176,8 +180,8 @@ body {
   position: absolute;
   top: 200px;
   left: 50%;
-  transform: translateX(-8%);
-  width: 130%;
+  transform: translateX(-50%);
+  max-width: 40%;
   opacity: 0;
   display: flex;
   transition: 0.5s ease-in-out;
@@ -185,16 +189,16 @@ body {
 .wrapper #skill #skill-icon-container3 {
   position: absolute;
   top: 200px;
-  left: 70%;
-  transform: translateX(-8%);
-  width: 130%;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 40%;
   opacity: 0;
   display: flex;
   transition: 0.5s ease-in-out;
 }
 .wrapper #skill .grid-container {
   display: flex;
-  width: 200px, 50%;
+  width: max(200px, 80%);
   height: min(150px, 50%);
   flex-wrap: wrap;
   column-gap: 50px;
@@ -250,50 +254,113 @@ body {
 }
 .wrapper footer {
   width: 100%;
-  height: 50vh;
-  background: rgba(51, 45, 45, 0.8823529412);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  column-gap: 60px;
-}
-.wrapper footer .contact-container {
-  width: 200px;
-  height: 120px;
-  padding: 30px;
-  border: 2px solid transparent;
-  border-radius: 20px;
+  height: 100vh;
+  background: rgba(12, 11, 11, 0.8823529412);
   display: flex;
   justify-content: space-between;
+}
+.wrapper footer #footer-container1 {
+  width: 50%;
+  height: 90vh;
+  display: flex;
+  align-self: flex-end;
   align-items: center;
   flex-direction: column;
-  transition: 0.3s;
 }
-@media screen and (min-width: 768px) {
-  .wrapper footer .contact-container:hover {
-    background: rgba(252, 75, 26, 0.1568627451);
-    transform: scale(1.1);
-    border: 2px solid #FFF;
-  }
+.wrapper footer #footer-container1 .contact-text-container {
+  width: 70%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 30px;
 }
-.wrapper footer .contact-container:active {
-  transform: scale(1);
-}
-.wrapper footer .contact-container img {
-  margin: auto;
-  width: 20%;
-  height: 30%;
-  background: #FFF;
-  padding: 10px;
-  border-radius: 50%;
-}
-.wrapper footer .contact-container p {
-  margin: auto;
+.wrapper footer #footer-container1 .contact-text-container h1 {
   color: #FFF;
   font-family: monospace;
-  font-size: 1.2rem;
   font-weight: 700;
+  font-size: 4.4rem;
+}
+.wrapper footer #footer-container1 .contact-text-container i {
+  padding-inline-end: 20px;
+  font-size: 1.5rem;
+}
+.wrapper footer #footer-container1 .contact-text-container p {
+  color: #FFF;
+  font-family: monospace;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+.wrapper footer #footer-container1 .contact-text-container .personal-contact {
+  display: flex;
+  max-width: 10%;
+}
+.wrapper footer #footer-container1 .contact-text-container .personal-contact a i {
+  font-size: 2rem;
+  transition: transform 0.3s;
+}
+.wrapper footer #footer-container1 .contact-text-container .personal-contact a i:hover {
+  transform: scale(1.3);
+}
+.wrapper footer #footer-container1 .contact-text-container .personal-contact a i:active {
+  transform: scale(0.9);
+}
+.wrapper footer #footer-container2 {
+  width: 50%;
+  height: 90vh;
+  display: flex;
+  align-self: flex-end;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper footer #footer-container2 .form-container {
+  display: flex;
+  align-items: center;
+  align-self: flex-start;
+  width: 100%;
+  height: 100%;
+}
+.wrapper footer #footer-container2 .form-container form {
+  margin-left: 10%;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+.wrapper footer #footer-container2 .form-container form .input-field {
+  border-radius: 5px;
+  border: none;
+  background: #524E4E;
+  font-size: 1.2rem;
+  width: 90%;
+  height: 30px;
+  padding: 10px 20px;
+}
+.wrapper footer #footer-container2 .form-container form .input-field::placeholder {
+  color: #FFF;
+}
+.wrapper footer #footer-container2 .form-container form #message-field {
+  height: 150px;
+}
+.wrapper footer #footer-container2 .form-container form #submit-button {
+  width: 30%;
+  height: 40px;
+  background: #8D1D2F;
+  border-radius: 5px;
+  border: none;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #FFF;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+@media screen and (min-width: 768px) {
+  .wrapper footer #footer-container2 .form-container form #submit-button:hover {
+    background: #F07B8E;
+  }
+}
+.wrapper footer #footer-container2 .form-container form #submit-button:active {
+  transform: scale(0.9);
 }
 
 @keyframes slide-animation {
