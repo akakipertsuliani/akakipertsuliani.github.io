@@ -44,4 +44,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let textAnimate = KUTE.to('#wellcome-text', { text: "Hello, world" }, { duration: 4500 }).start(); 
 
+    document.getElementById("submit-button").addEventListener("click", () => {
+        setTimeout(() => {
+            document.getElementById("response").innerHTML = "Please wait.";
+        }, 500);
+
+        setTimeout(() => {
+            document.getElementById("response").innerHTML = "Please wait..";
+        }, 900);
+
+        setTimeout(() => {
+            document.getElementById("response").innerHTML = "Please wait...";
+        }, 1300);
+    })
+
 });

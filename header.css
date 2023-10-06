@@ -6,7 +6,7 @@ html {
     width: 100%;
     height: 10vh;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     background: #066F0162;
     position: fixed;
@@ -19,11 +19,20 @@ html {
     margin-left: 80px;
     margin-bottom: 10px;
     transition: transform 0.3s;
-    width: 7.5%;
+    width: max(100px, 7.5%);
 }
 
 #header #logo:hover {
     transform: scale(1.1);
+}
+
+#header i {
+    font-size: 1.7rem;
+    transition: transform 0.3s;
+}
+
+#header i:active {
+    transform: scale(0.9);
 }
 
 #header #nav-container {
@@ -55,6 +64,14 @@ html {
 }
 
 @media screen and (min-width: 768px) {
+    #header #nav-container {
+        display: block;
+    }
+
+    #header i {
+        display: none;
+    }
+
     #header #nav-container #list-container .list .element:hover {
         color: #3DC507;
     }
@@ -72,6 +89,20 @@ html {
 
     #header #nav-container #list-container .list .element:hover::after {
         width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #header i {
+        display: block;
+    }
+
+    #header #nav-container {
+        display: none;
+    }
+
+    #header #logo {
+        margin-left: 10%;
     }
 }
 

@@ -335,6 +335,7 @@ body {
   width: 90%;
   height: 30px;
   padding: 10px 20px;
+  color: #FFF;
 }
 .wrapper footer #footer-container2 .form-container form .input-field::placeholder {
   color: #FFF;
@@ -342,7 +343,12 @@ body {
 .wrapper footer #footer-container2 .form-container form #message-field {
   height: 150px;
 }
-.wrapper footer #footer-container2 .form-container form #submit-button {
+.wrapper footer #footer-container2 .form-container form .send-area {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+.wrapper footer #footer-container2 .form-container form .send-area #submit-button {
   width: 30%;
   height: 40px;
   background: #8D1D2F;
@@ -355,12 +361,18 @@ body {
   transition: background-color 0.3s, transform 0.3s;
 }
 @media screen and (min-width: 768px) {
-  .wrapper footer #footer-container2 .form-container form #submit-button:hover {
+  .wrapper footer #footer-container2 .form-container form .send-area #submit-button:hover {
     background: #F07B8E;
   }
 }
-.wrapper footer #footer-container2 .form-container form #submit-button:active {
+.wrapper footer #footer-container2 .form-container form .send-area #submit-button:active {
   transform: scale(0.9);
+}
+.wrapper footer #footer-container2 .form-container form .send-area #response {
+  color: #FFF;
+  font-size: 1.25rem;
+  font-family: monospace;
+  font-weight: 700;
 }
 
 @keyframes slide-animation {

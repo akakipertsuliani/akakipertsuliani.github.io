@@ -25,6 +25,7 @@
                 <li class="list"><a href="#contact" class="element">Contact</a></li>
             </ul>
         </nav>
+        <i class="fa-solid fa-bars" style="color: #FFF;"></i>
     </header>
 
     <div class="wrapper">
@@ -127,7 +128,7 @@
                     </div>
                 </div>
                 <div class="skill-container">
-                    <img src="img/back-end.jpg" alt="back-end">
+                    <img src="img/back-end.png" alt="back-end">
                     <div id="paragraph-container">
                         <p>Back-end make web more interactive and secure</p>
                     </div>
@@ -147,23 +148,49 @@
                     <h1>Contact Me</h1>
                     <p><i class="fa-solid fa-envelope" style="color: #9141AC;"></i>akaki@kopitnari.net</p>
                     <div class="personal-contact">
-                        <a href="https://github.com/akakipertsuliani" target="_blank"><i class="fa-brands fa-github" style="color: #FFF;"></i></a>
-                        <a href="https://facebook.com/akaki.ferculiani.12" target="_blank"><i class="fa-brands fa-facebook" style="color: #FFF;"></i></a>
+                        <a href="https://github.com/akakipertsuliani" target="_blank"><i class="fa-brands fa-github"
+                                style="color: #FFF;"></i></a>
+                        <a href="https://facebook.com/akaki.ferculiani.12" target="_blank"><i
+                                class="fa-brands fa-facebook" style="color: #FFF;"></i></a>
                     </div>
                 </div>
             </div>
             <div id="footer-container2">
                 <div class="form-container">
-                    <form action="">
-                        <input type="text" id="name-field" class="input-field" placeholder="Your Name" required>
-                        <input type="email" id="email-field" class="input-field" placeholder="Your Email" required>
-                        <textarea id="message-field" class="input-field" rows="10" placeholder="Your Message" required></textarea>
-                        <input type="submit" id="submit-button" value="Send">
+                    <form name="submit-to-google-sheet">
+                        <input name="Name" type="text" id="name-field" class="input-field" placeholder="Your Name"
+                            required>
+                        <input name="Email" type="email" id="email-field" class="input-field" placeholder="Your Email"
+                            required>
+                        <textarea name="Message" id="message-field" class="input-field" rows="10"
+                            placeholder="Your Message" required></textarea>
+                        <div class="send-area">
+                            <input type="submit" id="submit-button" value="Send">
+                            <p id="response"></p>
+                        </div>
                     </form>
                 </div>
             </div>
         </footer>
     </div>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzRKilu_nPN9Tuaf4YVZOzYOojFR0xCtq8HvBin5P3cf9h2-BPrSGcdJcwWjlM7BFVv/exec';
+        const form = document.forms['submit-to-google-sheet'];
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    document.getElementById("response").innerHTML = "Succesfuly send"
+                    setTimeout(() => {
+                            document.getElementById("response").innerHTML = "";
+                    }, 3500)})
+                .catch(error => document.getElementById("response").innerHTML = "Please try again")
+
+        })
+
+    </script>
 
     <script src="script.js"></script>
 
