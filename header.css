@@ -11,7 +11,6 @@ html {
     background: #066F0162;
     position: fixed;
     z-index: 999;
-    color: #9222E7;
 }
 
 #header #logo {
@@ -26,14 +25,6 @@ html {
     transform: scale(1.1);
 }
 
-#header i {
-    font-size: 1.7rem;
-    transition: transform 0.3s;
-}
-
-#header i:active {
-    transform: scale(0.9);
-}
 
 #header #nav-container {
     margin-left: auto;
@@ -63,11 +54,15 @@ html {
     transition: color 0.3s;
 }
 
+#header #nav-container #list-container .list .element:active {
+    border: 2px solid #54038a;
+}
+
 @media screen and (min-width: 768px) {
     #header #nav-container {
         display: block;
     }
-
+    
     #header i {
         display: none;
     }
@@ -94,7 +89,13 @@ html {
 
 @media screen and (max-width: 768px) {
     #header i {
-        display: block;
+        margin-right: 2rem ;
+        font-size: 2rem;
+        transition: transform 0.3s;
+    }
+    
+    #header i:active {
+        transform: scale(0.8);
     }
 
     #header #nav-container {
@@ -104,8 +105,4 @@ html {
     #header #logo {
         margin-left: 10%;
     }
-}
-
-#header #nav-container #list-container .list .element:active {
-    border: 2px solid #54038a;
 }

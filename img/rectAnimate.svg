@@ -1,0 +1,40 @@
+<?xml version="1.0" standalone="no"?>
+<svg id="Group25" width="101" height="101" viewBox="0 0 101 101" fill="none" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; max-height: 100%;">
+<rect x="15.0938" y="15.0977" width="71.2046" height="71.2046" rx="3" stroke="url(#paint0_linear_511_32)" stroke-width="2" stroke-dasharray="0,0,0,279.6683654785156"><animate attributeType="XML" attributeName="stroke-dasharray" repeatCount="1" dur="8.333333333333334s" values="0,0,0,279.6683654785156; 
+          0,139.8341827392578,139.8341827392578,0; 
+          279.6683654785156,0,0,0" keyTimes="0; 0.5; 1" fill="freeze"></animate></rect>
+<rect x="7.09974" y="25.5255" width="71.2046" height="71.2046" rx="3" transform="rotate(-15 7.09974 25.5255)" stroke="url(#paint1_linear_511_32)" stroke-width="2" stroke-dasharray="0,0,0,279.66839599609375"><animate attributeType="XML" attributeName="stroke-dasharray" repeatCount="1" dur="8.333333333333334s" values="0,0,0,279.66839599609375; 
+          0,139.83419799804688,139.83419799804688,0;  
+          279.66839599609375,0,0,0" keyTimes="0; 0.5; 1" fill="freeze"></animate></rect>
+<rect x="2.06915" y="37.6688" width="71.2046" height="71.2046" rx="3" transform="rotate(-30 2.06915 37.6688)" stroke="url(#paint2_linear_511_32)" stroke-width="2" stroke-dasharray="0,0,0,279.66827392578125"><animate attributeType="XML" attributeName="stroke-dasharray" repeatCount="1" dur="8.333333333333334s" values="0,0,0,279.66827392578125; 
+          0,139.83413696289062,139.83413696289062,0; 
+          279.66827392578125,0,0,0" keyTimes="0; 0.5; 1" fill="freeze"></animate></rect>
+<rect x="2.06915" y="63.7297" width="71.2046" height="71.2046" rx="3" transform="rotate(-60 2.06915 63.7297)" stroke="url(#paint3_linear_511_32)" stroke-width="2" stroke-dasharray="0,0,0,279.66845703125"><animate attributeType="XML" attributeName="stroke-dasharray" repeatCount="1" dur="8.333333333333334s" values="0,0,0,279.66845703125; 
+          0,139.834228515625,139.834228515625,0; 
+          279.66845703125,0,0,0" keyTimes="0; 0.5; 1" fill="freeze"></animate></rect>
+<rect x="7.09974" y="75.873" width="71.2046" height="71.2046" rx="3" transform="rotate(-75 7.09974 75.873)" stroke="url(#paint4_linear_511_32)" stroke-width="2" stroke-dasharray="0,0,0,279.6684265136719"><animate attributeType="XML" attributeName="stroke-dasharray" repeatCount="1" dur="8.333333333333334s" values="0,0,0,279.6684265136719; 
+          0,139.83421325683594,139.83421325683594,0; 
+          279.6684265136719,0,0,0" keyTimes="0; 0.5; 1" fill="freeze"></animate></rect>
+<defs>
+<linearGradient id="paint0_linear_511_32" x1="87.2983" y1="14.0977" x2="14.0937" y2="87.3022" gradientUnits="userSpaceOnUse">
+<stop offset="0.155" stop-color="#295FB0"></stop>
+<stop offset="0.6975" stop-color="#9D29B0"></stop>
+</linearGradient>
+<linearGradient id="paint1_linear_511_32" x1="79.0796" y1="24.8184" x2="5.87499" y2="98.0229" gradientUnits="userSpaceOnUse">
+<stop offset="0.155" stop-color="#295FB0"></stop>
+<stop offset="0.6975" stop-color="#9D29B0"></stop>
+</linearGradient>
+<linearGradient id="paint2_linear_511_32" x1="73.9077" y1="37.3027" x2="0.703118" y2="110.507" gradientUnits="userSpaceOnUse">
+<stop offset="0.155" stop-color="#295FB0"></stop>
+<stop offset="0.6975" stop-color="#9D29B0"></stop>
+</linearGradient>
+<linearGradient id="paint3_linear_511_32" x1="73.9077" y1="64.0957" x2="0.703118" y2="137.3" gradientUnits="userSpaceOnUse">
+<stop offset="0.155" stop-color="#295FB0"></stop>
+<stop offset="0.6975" stop-color="#9D29B0"></stop>
+</linearGradient>
+<linearGradient id="paint4_linear_511_32" x1="79.0796" y1="76.5801" x2="5.87499" y2="149.785" gradientUnits="userSpaceOnUse">
+<stop offset="0.155" stop-color="#295FB0"></stop>
+<stop offset="0.6975" stop-color="#9D29B0"></stop>
+</linearGradient>
+</defs>
+<setting>{"type":"direct","speed":6,"random":1,"shift":1,"size":1,"rupture":50}</setting></svg>

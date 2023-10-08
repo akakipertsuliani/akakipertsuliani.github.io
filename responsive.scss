@@ -1,0 +1,79 @@
+@media screen and (max-width: 768px) {
+    .wrapper {
+        #section1 {
+            height: 30vh;
+            padding-block: 170px;
+
+            #section1background {
+                top: 30%;
+                width: 100%;
+            }
+
+            .wellcome-text-container {
+                width: 100%;
+                margin-bottom: 30vh;
+
+                .container {
+                    #wellcome-text {
+                        font-size: 2rem;
+                    }
+
+                    h2 {
+                        font-size: 2rem;
+                    }
+
+                    .skill-texts {
+                        h3 {
+                            font-size: 1.5rem;
+                        }
+
+                        .skill-text-conatienr {
+                            margin-inline: 15px;
+                            height: 40px;
+                            
+                            .skill-text {
+                                font-size: 1.5rem;
+                                animation: slide-animation 8s linear infinite;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+@keyframes slide-animation {
+    0% {
+        bottom: -35%;
+    }
+
+    30% {
+        bottom: -35%;
+    }
+
+    35% {
+        bottom: 45%;
+    }
+
+    65% {
+        bottom: 45%;
+    }
+
+    70% {
+        bottom: 125%;
+    }
+
+    80% {
+        bottom: 125%;
+    }
+
+    90% {
+        bottom: 205%;
+    }
+
+    100% {
+        bottom: 205%;
+    }
+}
