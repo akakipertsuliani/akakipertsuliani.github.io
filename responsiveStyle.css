@@ -1,10 +1,10 @@
 @media screen and (max-width: 768px) {
   .wrapper #section1 {
-    height: 30vh;
+    height: 40vh;
     padding-block: 170px;
   }
   .wrapper #section1 #section1background {
-    top: 30%;
+    top: 15%;
     width: 100%;
   }
   .wrapper #section1 .wellcome-text-container {
@@ -28,31 +28,79 @@
     font-size: 1.5rem;
     animation: slide-animation 8s linear infinite;
   }
-}
-@keyframes slide-animation {
-  0% {
-    bottom: -35%;
+  .wrapper #about #about-text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
   }
-  30% {
-    bottom: -35%;
+  .wrapper #about #about-text-container .header,
+  .wrapper #about #about-text-container .paragraph,
+  .wrapper #about #about-text-container .emphasis {
+    opacity: 1;
+    position: static;
+    width: 80%;
   }
-  35% {
-    bottom: 45%;
+  .wrapper #about #about-text-container .header:focus,
+  .wrapper #about #about-text-container .paragraph:focus,
+  .wrapper #about #about-text-container .emphasis:focus {
+    background: #303180;
+    transform: scale(1.1);
   }
-  65% {
-    bottom: 45%;
+  .wrapper footer {
+    display: flex;
+    flex-direction: column;
+    height: 800px;
   }
-  70% {
-    bottom: 125%;
+  .wrapper footer #footer-container1,
+  .wrapper footer #footer-container2 {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-  80% {
-    bottom: 125%;
+  .wrapper footer #footer-container1 {
+    display: flex;
+    justify-content: end;
   }
-  90% {
-    bottom: 205%;
+  .wrapper footer #footer-container1 .contact-text-container {
+    width: 80%;
+    row-gap: 20px;
   }
-  100% {
-    bottom: 205%;
+  .wrapper footer #footer-container1 .contact-text-container h1 {
+    font-size: 3rem;
+  }
+  .wrapper footer #footer-container2 form {
+    width: 100%;
+    margin-left: 0;
+  }
+  @keyframes slide-animation {
+    0% {
+      bottom: -19%;
+    }
+    30% {
+      bottom: -19%;
+    }
+    35% {
+      bottom: 180%;
+    }
+    65% {
+      bottom: 180%;
+    }
+    70% {
+      bottom: 380%;
+    }
+    80% {
+      bottom: 380%;
+    }
+    90% {
+      bottom: 580%;
+    }
+    100% {
+      bottom: 580%;
+    }
   }
 }
 

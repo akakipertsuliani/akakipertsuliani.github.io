@@ -1,11 +1,11 @@
 @media screen and (max-width: 768px) {
     .wrapper {
         #section1 {
-            height: 30vh;
+            height: 40vh;
             padding-block: 170px;
 
             #section1background {
-                top: 30%;
+                top: 15%;
                 width: 100%;
             }
 
@@ -30,7 +30,7 @@
                         .skill-text-conatienr {
                             margin-inline: 15px;
                             height: 40px;
-                            
+
                             .skill-text {
                                 font-size: 1.5rem;
                                 animation: slide-animation 8s linear infinite;
@@ -41,39 +41,100 @@
             }
 
         }
-    }
-}
 
-@keyframes slide-animation {
-    0% {
-        bottom: -35%;
+        #about {
+            #about-text-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+
+                .header,
+                .paragraph,
+                .emphasis {
+                    opacity: 1;
+                    position: static;
+                    width: 80%;
+
+                    &:focus {
+                        background: #303180;
+                        transform: scale(1.1);
+                    }
+                }
+
+            }
+        }
+
+        footer {
+            display: flex;
+            flex-direction: column;
+            height: 800px;
+
+            #footer-container1,
+            #footer-container2 {
+                width: 100%;
+                height: 350px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #footer-container1 {
+                display: flex;
+                justify-content: end;
+
+                .contact-text-container {
+                    width: 80%;
+                    row-gap: 20px;
+
+                    h1 {
+                        font-size: 3.0rem;
+                    }
+                }
+            }
+
+            #footer-container2 {
+                form {
+                    width: 100%;
+                    margin-left: 0;
+                }
+            }
+        }
+
     }
 
-    30% {
-        bottom: -35%;
-    }
+    @keyframes slide-animation {
+        0% {
+            bottom: -19%;
+        }
 
-    35% {
-        bottom: 45%;
-    }
+        30% {
+            bottom: -19%;
+        }
 
-    65% {
-        bottom: 45%;
-    }
+        35% {
+            bottom: 180%;
+        }
 
-    70% {
-        bottom: 125%;
-    }
+        65% {
+            bottom: 180%;
+        }
 
-    80% {
-        bottom: 125%;
-    }
+        70% {
+            bottom: 380%;
+        }
 
-    90% {
-        bottom: 205%;
-    }
+        80% {
+            bottom: 380%;
+        }
 
-    100% {
-        bottom: 205%;
+        90% {
+            bottom: 580%;
+        }
+
+        100% {
+            bottom: 580%;
+        }
     }
 }

@@ -93,8 +93,6 @@ body {
   width: 100%;
   height: 100%;
   overflow: visible;
-  animation: scroll-animation linear;
-  animation-timeline: view();
 }
 .wrapper #about #about-text-container .header {
   position: absolute;
@@ -275,13 +273,15 @@ body {
   height: 100vh;
   background: rgba(12, 11, 11, 0.8823529412);
   display: flex;
-  justify-content: space-between;
 }
-.wrapper footer #footer-container1 {
+.wrapper footer #footer-container1,
+.wrapper footer #footer-container2 {
   width: 50%;
   height: 90vh;
   display: flex;
   align-self: flex-end;
+}
+.wrapper footer #footer-container1 {
   align-items: center;
   flex-direction: column;
 }
@@ -324,10 +324,6 @@ body {
   transform: scale(0.9);
 }
 .wrapper footer #footer-container2 {
-  width: 50%;
-  height: 90vh;
-  display: flex;
-  align-self: flex-end;
   justify-content: center;
   align-items: center;
 }
@@ -343,7 +339,7 @@ body {
   width: 70%;
   display: flex;
   flex-direction: column;
-  row-gap: 30px;
+  row-gap: 2.5vh;
 }
 .wrapper footer #footer-container2 .form-container form .input-field {
   border-radius: 5px;

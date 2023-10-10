@@ -43,6 +43,10 @@ document.addEventListener("DOMContentLoaded", () => {
             location.href = "#skill";
         });
     }
+
+    document.getElementById("submit-button").addEventListener("click", () => {
+        location.href = "#contact";
+    })
 });
 
 let textAnimate = KUTE.to('#wellcome-text', { text: "Hello, world" }, { duration: 3900 }).start();

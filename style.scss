@@ -106,8 +106,6 @@ body {
             width: 100%;
             height: 100%;
             overflow: visible;
-            animation: scroll-animation linear;
-            animation-timeline: view();
 
             .header {
                 position: absolute;
@@ -317,13 +315,16 @@ body {
         height: 100vh;
         background: #0C0B0BE1;
         display: flex;
-        justify-content: space-between;
 
-        #footer-container1 {
+        #footer-container1,
+        #footer-container2 {
             width: 50%;
             height: 90vh;
             display: flex;
             align-self: flex-end;
+        }
+
+        #footer-container1 {
             align-items: center;
             flex-direction: column;
 
@@ -380,10 +381,6 @@ body {
         }
 
         #footer-container2 {
-            width: 50%;
-            height: 90vh;
-            display: flex;
-            align-self: flex-end;
             justify-content: center;
             align-items: center;
 
@@ -399,7 +396,7 @@ body {
                     width: 70%;
                     display: flex;
                     flex-direction: column;
-                    row-gap: 30px;
+                    row-gap: 2.5vh;
 
                     .input-field {
                         border-radius: 5px;
