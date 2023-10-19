@@ -11,6 +11,7 @@ html {
     background: #066F0162;
     position: fixed;
     z-index: 999;
+    transition: top 0.3s;
 }
 
 #header #logo {

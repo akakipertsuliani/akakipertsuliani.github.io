@@ -43,25 +43,42 @@
         }
 
         #about {
+            flex-direction: column-reverse;
+
             #about-text-container {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-wrap: wrap;
+                padding: 10px 20px;
+                width: 80%;
+                height: 40%;
 
-                .header,
-                .paragraph,
-                .emphasis {
-                    opacity: 1;
-                    position: static;
-                    width: 80%;
-
-                    &:focus {
-                        background: #303180;
-                        transform: scale(1.1);
-                    }
+                .header {
+                    font-size: 1rem;
                 }
 
+                .paragraph {
+                    font-size: 1rem;
+                }
+
+                .emphasis {
+                    font-size: 1rem;
+                }
+
+                .emoji {
+                    font-size: 1rem;
+                }
+
+            }
+        }
+
+        #skill {
+            .skill-wrapper {
+                flex-direction: column;
+                align-items: center;
+                row-gap: 20px;
+
+                .skill-container {
+                    width: 300px;
+                    height: 170px;
+                }
             }
         }
 

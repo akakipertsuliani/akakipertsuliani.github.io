@@ -87,90 +87,58 @@ body {
 }
 .wrapper #about {
   position: relative;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 .wrapper #about #about-text-container {
-  position: relative;
-  width: 90%;
-  height: 100%;
-  overflow: visible;
+  width: 40%;
+  height: 50%;
+  padding: 1vh 2vw;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 15px;
+  background: #303168;
+}
+.wrapper #about #about-text-container p {
+  font-family: monospace;
+  font-weight: 700;
 }
 .wrapper #about #about-text-container .header {
-  position: absolute;
-  top: 20%;
-  left: -210%;
-  max-width: 600px;
-  padding: 15px;
-  background: #303168;
   color: #FFF;
-  font-size: 24px;
-  font-weight: 700;
-  font-family: monospace;
-  border-radius: 20px;
-  transition: background-color 0.3s, transform 0.3s, left 0.7s;
-}
-.wrapper #about #about-text-container .header:hover {
-  background: #303180;
-  transform: scale(1.1);
+  font-size: clamp(0.6rem, 1.8vw, 3rem);
 }
 .wrapper #about #about-text-container .paragraph {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 600px;
-  padding: 15px;
-  background: #303168;
   color: #F0F0F0;
-  font-size: 18px;
-  font-family: monospace;
-  font-weight: 700;
-  border-radius: 20px;
-  transition: background-color 0.3s, transform 0.3s, left 0.7s;
-}
-.wrapper #about #about-text-container .paragraph:hover {
-  background: #303180;
-  transform: scale(1.1);
+  font-size: clamp(0.6rem, 1.3vw, 3rem);
 }
 .wrapper #about #about-text-container .emphasis {
-  position: absolute;
-  top: 80%;
-  left: -220%;
-  max-width: 600px;
-  padding: 15px;
-  background: #303168;
   color: #FF5722;
-  font-size: 20px;
-  font-weight: 700;
-  font-family: monospace;
-  border-radius: 20px;
-  transition: background-color 0.3s, transform 0.3s, left 0.7s;
-}
-.wrapper #about #about-text-container .emphasis:hover {
-  background: #303180;
-  transform: scale(1.1);
+  font-size: clamp(0.6rem, 1.5vw, 3rem);
 }
 .wrapper #about #about-text-container .emoji {
-  font-size: 24px;
+  font-size: clamp(0.6rem, 1.8vw, 3rem);
 }
 .wrapper #about #svg-animation {
-  position: absolute;
   z-index: -1;
-  left: 50%;
-  top: 50%;
-  width: 70%;
-  transform: translate(-50%, -50%);
+  width: 40%;
   filter: blur(20px);
 }
 .wrapper #skill {
   position: relative;
   width: 100vw;
   height: 100vh;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
 }
-.wrapper #skill .skill-container {
+.wrapper #skill .skill-wrapper {
+  display: flex;
+  width: 90%;
+  column-gap: 30px;
+}
+.wrapper #skill .skill-wrapper .skill-container {
   position: relative;
   width: 300px;
   height: 300px;
@@ -178,59 +146,53 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-radius: 15px;
   overflow: hidden;
 }
-.wrapper #skill .skill-container img {
+.wrapper #skill .skill-wrapper .skill-container img {
+  width: 100%;
+  height: 100%;
   border-radius: 15px;
 }
-.wrapper #skill .skill-container .light-effect {
+.wrapper #skill .skill-wrapper .skill-container .light-effect {
   position: absolute;
   top: 80%;
-  width: 100%;
-  height: 300px;
+  width: 101%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 30px;
-  column-gap: 40px;
   background: rgba(0, 98, 128, 0.1333333333);
   backdrop-filter: blur(20px);
-  border-radius: 15px;
   transition: 0.5s;
 }
-@media screen and (min-width: 768px) {
-  .wrapper #skill .skill-container .light-effect:hover {
-    top: 0%;
-  }
-}
-.wrapper #skill .skill-container .light-effect:focus {
+.wrapper #skill .skill-wrapper .skill-container .light-effect:hover {
   top: 0%;
 }
-.wrapper #skill .skill-container .light-effect h1 {
+.wrapper #skill .skill-wrapper .skill-container .light-effect h1 {
   position: absolute;
-  top: 5%;
+  top: 4%;
   left: 5%;
   color: #FFF;
-  font-size: 1.75rem;
+  font-size: clamp(1rem, 5vw, 2rem);
   font-family: monospace;
   font-weight: 700;
 }
-.wrapper #skill .skill-container .light-effect .skill-logo-container {
+.wrapper #skill .skill-wrapper .skill-container .light-effect .skill-logo-container {
   width: 100%;
-  height: 60%;
+  height: 30%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
   column-gap: 10px;
-  row-gap: 25px;
 }
-.wrapper #skill .skill-container .light-effect .skill-logo-container img {
+.wrapper #skill .skill-wrapper .skill-container .light-effect .skill-logo-container img {
   border-radius: 0;
   width: 25%;
 }
-.wrapper #skill .skill-container .light-effect .skill-logo-container .image-resize {
+.wrapper #skill .skill-wrapper .skill-container .light-effect .skill-logo-container .image-resize {
   width: 40%;
 }
 .wrapper footer {

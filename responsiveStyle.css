@@ -28,24 +28,34 @@
     font-size: 1.5rem;
     animation: slide-animation 8s linear infinite;
   }
+  .wrapper #about {
+    flex-direction: column-reverse;
+  }
   .wrapper #about #about-text-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  .wrapper #about #about-text-container .header,
-  .wrapper #about #about-text-container .paragraph,
-  .wrapper #about #about-text-container .emphasis {
-    opacity: 1;
-    position: static;
+    padding: 10px 20px;
     width: 80%;
+    height: 40%;
   }
-  .wrapper #about #about-text-container .header:focus,
-  .wrapper #about #about-text-container .paragraph:focus,
-  .wrapper #about #about-text-container .emphasis:focus {
-    background: #303180;
-    transform: scale(1.1);
+  .wrapper #about #about-text-container .header {
+    font-size: 1rem;
+  }
+  .wrapper #about #about-text-container .paragraph {
+    font-size: 1rem;
+  }
+  .wrapper #about #about-text-container .emphasis {
+    font-size: 1rem;
+  }
+  .wrapper #about #about-text-container .emoji {
+    font-size: 1rem;
+  }
+  .wrapper #skill .skill-wrapper {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+  }
+  .wrapper #skill .skill-wrapper .skill-container {
+    width: 300px;
+    height: 170px;
   }
   .wrapper footer {
     display: flex;
