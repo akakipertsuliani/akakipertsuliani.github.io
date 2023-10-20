@@ -1,15 +1,10 @@
 @media screen and (max-width: 768px) {
   .wrapper #section1 {
-    height: 40vh;
+    height: 50vh;
     padding-block: 170px;
-  }
-  .wrapper #section1 #section1background {
-    top: 15%;
-    width: 100%;
   }
   .wrapper #section1 .wellcome-text-container {
     width: 100%;
-    margin-bottom: 30vh;
   }
   .wrapper #section1 .wellcome-text-container .container #wellcome-text {
     font-size: 2rem;

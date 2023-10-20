@@ -3,23 +3,23 @@ html {
 }
 
 #header {
+    position: fixed;
     width: 100%;
     height: 10vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: #066F0162;
-    position: fixed;
     z-index: 999;
     transition: top 0.3s;
 }
 
 #header #logo {
+    width: max(100px, 7.5%);
     align-self: center;
     margin-left: 80px;
     margin-bottom: 10px;
     transition: transform 0.3s;
-    width: max(100px, 7.5%);
 }
 
 #header #logo:hover {
@@ -89,6 +89,10 @@ html {
 }
 
 @media screen and (max-width: 768px) {
+    #header #logo {
+        margin-left: 10%;
+    }
+
     #header i {
         margin-right: 2rem;
         font-size: 2rem;
@@ -100,22 +104,23 @@ html {
     }
 
     #header #nav-container {
-        display: none;
+        display: flex;
         position: absolute;
-        top: 70px;
-        left: 170px;
-        width: 200px;
+        top: 10vh;
+        left: 200%;
+        transform: translateX(-100%);
+        width: 90%;
         height: 200px;
         border-radius: 5px;
-        background-color: #3DC507;
+        background-color: #036D19;
+        transition: left 0.4s;
     }
 
     #header #nav-container #list-container {
         width: 100%;
         height: 100%;
-        flex-direction: column;
         display: flex;
-        row-gap: 5%;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
     }
@@ -123,22 +128,24 @@ html {
     #header #nav-container #list-container .list {
         width: 100%;
         height: 25%;
+        border-radius: 5px;
+        border-bottom: 1px solid #808080;
         display: flex;
         justify-content: center;
         align-items: center;
-        text-align: center;
+    }
+
+    #header #nav-container #list-container .list:active {
+        background-color: #3DC507;
     }
 
     #header #nav-container #list-container .list .element {
         width: 100%;
-        height: 50%;
+        text-align: center;
         font-size: 1rem;
-        border-radius: 0;
-        border-top: 1px solid #808080;
-        border-bottom: 1px solid #808080;
     }
 
-    #header #logo {
-        margin-left: 10%;
+    #header #nav-container #list-container .list .element:active {
+        border: none;
     }
 }
