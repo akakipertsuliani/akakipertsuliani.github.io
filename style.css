@@ -3,9 +3,14 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
 body {
   width: min(100vw, 1960px);
-  background: #062052;
+  background: #031029;
   overflow-x: hidden;
 }
 
@@ -47,43 +52,42 @@ body {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: monospace;
-  font-size: clamp(0.5rem, 4vw, 5rem);
+  font-size: clamp(1.5rem, 4vw, 5rem);
   background-size: 400%;
   animation: gradient-animation 2s ease-in-out infinite;
 }
 .wrapper #section1 .wellcome-text-container .container h2 {
   color: #FFF;
   font-family: monospace;
-  font-size: clamp(0.5rem, 5vw, 5rem);
+  font-size: clamp(1.8rem, 5vw, 5rem);
 }
 .wrapper #section1 .wellcome-text-container .container .skill-texts {
   position: relative;
+  width: 100%;
   display: flex;
+  justify-content: center;
   align-items: center;
   color: #FFF;
   font-family: monospace;
-  font-size: 4.5rem;
+  font-size: clamp(1.3rem, 5vw, 5rem);
 }
-.wrapper #section1 .wellcome-text-container .container .skill-texts .skill-text-conatienr {
+.wrapper #section1 .wellcome-text-container .container .skill-texts h3 {
+  display: flex;
+  text-align: center;
+}
+.wrapper #section1 .wellcome-text-container .container .skill-texts h3 .skill-text-conatiner {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin-inline: 25px;
-  height: 90px;
-  overflow: hidden;
-}
-.wrapper #section1 .wellcome-text-container .container .skill-texts .skill-text-conatienr .skill-text {
-  background: linear-gradient(to right, #F5AF19, #f12711);
+  margin-inline: 20px;
+  height: clamp(1rem, 8vw, 20rem);
+  background: linear-gradient(90deg, #833AB4 0%, #FD1D1D 45%, #FCB045 100%);
   -webkit-background-clip: text;
   background-clip: text;
+  overflow: hidden;
+}
+.wrapper #section1 .wellcome-text-container .container .skill-texts h3 .skill-text-conatiner .skill-text {
   color: transparent;
-  display: flex;
-  flex-direction: column;
-  font-size: 4.5rem;
-  font-weight: 700;
-  position: relative;
-  margin-bottom: 50px;
-  animation: slide-animation 8s linear infinite;
+  animation: slide-animation 10s ease-in-out infinite;
 }
 .wrapper #about {
   position: relative;
@@ -127,78 +131,58 @@ body {
   filter: blur(20px);
 }
 .wrapper #skill {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
   justify-content: center;
   align-items: center;
 }
-.wrapper #skill .skill-wrapper {
+.wrapper #skill .skill-container {
+  position: relative;
+  background: transparent;
+  height: 40vh;
+  width: 70vw;
   display: flex;
-  justify-content: center;
   align-items: center;
-  width: 90%;
-  column-gap: 30px;
+  margin-inline: auto;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  border: 2px solid #808080;
+  border-radius: 10px;
+  box-shadow: 0px 0px 0.4176px 0px #FFF, 0px 0px 0.8352px 0px #FFF, 0px 0px 2.9232px 0px #FFF, 0px 0px 5.8464px 0px #FFF, 0px 0px 10.0224px 0px #FFF, 0px 0px 17.5392px 0px #FFF;
 }
-.wrapper #skill .skill-wrapper .skill-container {
-  position: relative;
-  width: 300px;
-  height: 300px;
+.wrapper #skill .skill-container .img-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  border-radius: 15px;
-  overflow: hidden;
+  height: 90%;
+  width: 200px;
+  margin-right: 55px;
+  margin-top: auto;
+  background: #2D0080;
+  padding: 25px;
+  border-radius: 20px;
 }
-.wrapper #skill .skill-wrapper .skill-container img {
-  width: 100%;
-  height: 100%;
-  border-radius: 15px;
+.wrapper #skill .skill-container .img-container:last-child {
+  margin-right: 0;
 }
-.wrapper #skill .skill-wrapper .skill-container .light-effect {
-  position: absolute;
-  top: 80%;
-  width: 101%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  background: rgba(0, 98, 128, 0.1333333333);
-  backdrop-filter: blur(20px);
-  transition: 0.5s;
+.wrapper #skill .skill-container .img-container .skill-logo {
+  margin-bottom: auto;
+  height: 50%;
+  width: 150px;
+  transition: transform 0.3s ease-in-out;
 }
-.wrapper #skill .skill-wrapper .skill-container .light-effect:hover {
-  top: 0%;
-}
-.wrapper #skill .skill-wrapper .skill-container .light-effect h1 {
-  position: absolute;
-  top: 4%;
-  left: 5%;
+.wrapper #skill .skill-container .img-container .logo-name {
+  margin-bottom: auto;
   color: #FFF;
-  font-size: clamp(1rem, 5vw, 2rem);
   font-family: monospace;
   font-weight: 700;
+  font-size: 1.5rem;
 }
-.wrapper #skill .skill-wrapper .skill-container .light-effect .skill-logo-container {
-  width: 100%;
-  height: 30%;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-wrap: wrap;
-  column-gap: 10px;
-}
-.wrapper #skill .skill-wrapper .skill-container .light-effect .skill-logo-container img {
-  border-radius: 0;
-  width: 25%;
-}
-.wrapper #skill .skill-wrapper .skill-container .light-effect .skill-logo-container .image-resize {
-  width: 40%;
+.wrapper #skill .skill-container .img-container .flask {
+  padding: 5px;
+  border-radius: 10px;
+  background: #FFF;
 }
 .wrapper footer {
-  background: rgba(12, 11, 11, 0.8823529412);
+  background: #0C0B0B;
 }
 .wrapper footer #footer-container1,
 .wrapper footer #footer-container2 {
@@ -217,30 +201,30 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  row-gap: 30px;
+  row-gap: 2.5vh;
 }
 .wrapper footer #footer-container1 .contact-text-container h1 {
   color: #FFF;
   font-family: monospace;
   font-weight: 700;
-  font-size: 4.4rem;
+  font-size: clamp(3rem, 5.5vw, 5rem);
 }
 .wrapper footer #footer-container1 .contact-text-container i {
   padding-inline-end: 20px;
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 2vw, 2rem);
 }
 .wrapper footer #footer-container1 .contact-text-container p {
   color: #FFF;
   font-family: monospace;
   font-weight: 700;
-  font-size: 1.25rem;
+  font-size: clamp(1rem, 2vw, 2rem);
 }
 .wrapper footer #footer-container1 .contact-text-container .personal-contact {
   display: flex;
   max-width: 10%;
 }
 .wrapper footer #footer-container1 .contact-text-container .personal-contact a i {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
   transition: transform 0.3s;
 }
 .wrapper footer #footer-container1 .contact-text-container .personal-contact a i:hover {
@@ -254,11 +238,11 @@ body {
   align-items: center;
 }
 .wrapper footer #footer-container2 .form-container {
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   align-self: flex-start;
-  width: 100%;
-  height: 100%;
 }
 .wrapper footer #footer-container2 .form-container form {
   margin-left: 10%;
@@ -281,6 +265,7 @@ body {
   color: #FFF;
 }
 .wrapper footer #footer-container2 .form-container form #message-field {
+  resize: none;
   height: 150px;
 }
 .wrapper footer #footer-container2 .form-container form .send-area {
@@ -329,28 +314,28 @@ body {
 }
 @keyframes slide-animation {
   0% {
-    bottom: -5%;
+    transform: translateY(0%);
   }
   30% {
-    bottom: -5%;
+    transform: translateY(0%);
   }
   35% {
-    bottom: 145%;
+    transform: translateY(-100%);
   }
   65% {
-    bottom: 145%;
+    transform: translateY(-100%);
   }
   70% {
-    bottom: 295%;
+    transform: translateY(-200%);
   }
   80% {
-    bottom: 295%;
+    transform: translateY(-200%);
   }
   90% {
-    bottom: 445%;
+    transform: translateY(-300%);
   }
   100% {
-    bottom: 445%;
+    transform: translateY(-300%);
   }
 }
 @keyframes gradient-animation {

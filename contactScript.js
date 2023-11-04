@@ -2,7 +2,7 @@ const scriptURL = 'https://script.google.com/macros/s/AKfycbzRKilu_nPN9Tuaf4YVZO
 const form = document.forms['submit-to-google-sheet'];
 
 form.addEventListener('submit', e => {
-    e.preventDefault()
+    e.preventDefault();
     document.getElementById("response").innerHTML = "Please wait...";
 
     fetch(scriptURL, { method: 'POST', body: new FormData(form) })
@@ -10,7 +10,6 @@ form.addEventListener('submit', e => {
             document.getElementById("response").innerHTML = "Succesfuly send"
             setTimeout(() => {
                 document.getElementById("response").innerHTML = "";
-            }, 3500)
-        })
-        .catch(error => document.getElementById("response").innerHTML = "Please try again")
-})
+            }, 3500);
+        }).catch(error => document.getElementById("response").innerHTML = "Please try again");
+});

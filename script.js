@@ -8,18 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
             document.getElementById("header").style.top = "-9vh";
         }
-
         previousScrollY = currentScrollY;
-
-        if (window.scrollY > 300 && window.screenY < 1180) {
-            document.getElementsByClassName("header")[0].style.left = "10%";
-            document.getElementsByClassName("paragraph")[0].style.left = "50%";
-            document.getElementsByClassName("emphasis")[0].style.left = "20%";
-        } else {
-            document.getElementsByClassName("header")[0].style.left = "-210%";
-            document.getElementsByClassName("paragraph")[0].style.left = "250%";
-            document.getElementsByClassName("emphasis")[0].style.left = "-220%";
-        }
     })
 
     document.getElementById("menu-bar").addEventListener("click", () => {
@@ -31,6 +20,10 @@ document.addEventListener("DOMContentLoaded", () => {
             navBarPosition = !navBarPosition;
         })
     })
+
+    // window.addEventListener("loadstart", () => {
+    //     console.log("Nice");
+    // })
 
 });
 

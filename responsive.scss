@@ -8,28 +8,17 @@
                 width: 100%;
 
                 .container {
-                    #wellcome-text {
-                        font-size: 2rem;
-                    }
-
-                    h2 {
-                        font-size: 2rem;
-                    }
-
                     .skill-texts {
                         h3 {
-                            font-size: 1.5rem;
-                        }
-
-                        .skill-text-conatienr {
-                            margin-inline: 15px;
-                            height: 40px;
-
-                            .skill-text {
-                                font-size: 1.5rem;
-                                animation: slide-animation 8s linear infinite;
+                            .skill-text-conatiner {
+                                .skill-text {
+                                    background: linear-gradient(90deg, #833AB4 0%, #FD1D1D 45%, #FCB045 100%);
+                                    -webkit-background-clip: text;
+                                    background-clip: text;
+                                }
                             }
                         }
+
                     }
                 }
             }
@@ -63,28 +52,15 @@
             }
         }
 
-        #skill {
-            .skill-wrapper {
-                flex-direction: column;
-                align-items: center;
-                row-gap: 20px;
-
-                .skill-container {
-                    width: 300px;
-                    height: 170px;
-                }
-            }
-        }
-
         footer {
             display: flex;
             flex-direction: column;
-            height: 800px;
+            min-height: 100vh;
 
             #footer-container1,
             #footer-container2 {
                 width: 100%;
-                height: 350px;
+                height: 50dvh;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -99,9 +75,6 @@
                     width: 80%;
                     row-gap: 20px;
 
-                    h1 {
-                        font-size: 3.0rem;
-                    }
                 }
             }
 
@@ -113,39 +86,5 @@
             }
         }
 
-    }
-
-    @keyframes slide-animation {
-        0% {
-            bottom: -19%;
-        }
-
-        30% {
-            bottom: -19%;
-        }
-
-        35% {
-            bottom: 180%;
-        }
-
-        65% {
-            bottom: 180%;
-        }
-
-        70% {
-            bottom: 380%;
-        }
-
-        80% {
-            bottom: 380%;
-        }
-
-        90% {
-            bottom: 580%;
-        }
-
-        100% {
-            bottom: 580%;
-        }
     }
 }
