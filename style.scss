@@ -27,6 +27,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-x: hidden;
 
     #section1,
     #about,
@@ -36,7 +37,6 @@ body {
         height: 100vh;
         display: flex;
     }
-
 
     #section1 {
         position: relative;
@@ -89,19 +89,18 @@ body {
                             display: flex;
                             flex-direction: column;
                             margin-inline: 20px;
-                            height: clamp(1rem, 8vw, 20rem);
-                            background: linear-gradient(90deg, #833AB4 0%, #FD1D1D 45%, #FCB045 100%);
-                            -webkit-background-clip: text;
-                            background-clip: text;
+                            height: clamp(10px, 6.8vw, 10vw);
                             overflow: hidden;
 
                             .skill-text {
+                                background: linear-gradient(90deg, #833AB4 0%, #FD1D1D 45%, #FCB045 100%);
+                                -webkit-background-clip: text;
+                                background-clip: text;
                                 color: transparent;
                                 animation: slide-animation 10s ease-in-out infinite;
                             }
                         }
                     }
-
                 }
             }
         }
@@ -111,8 +110,15 @@ body {
 
     #about {
         position: relative;
-        justify-content: space-around;
+        justify-content: space-evenly;
         align-items: center;
+        background: #2A3F65;
+
+        .my-image {
+            width: 30%;
+            height: 50%;
+            border-radius: 50%/20px;
+        }
 
         #about-text-container {
             width: 40%;
@@ -150,83 +156,104 @@ body {
                 font-size: clamp(0.6rem, 1.8vw, 3rem);
             }
         }
-
-        #svg-animation {
-            z-index: -1;
-            width: 40%;
-            filter: blur(20px);
-        }
     }
 
     /* skill page */
 
     #skill {
+        position: relative;
+        display: flex;
         justify-content: center;
         align-items: center;
-
+        background: #000; 
+      
         .skill-container {
-            position: relative;
-            background: transparent;
-            height: 40vh;
-            width: 70vw;
+          position: relative;
+          background: #222;
+          height: 40vh;
+          width: 70vw;
+          display: flex;
+          align-items: center;
+          margin: 0 auto;
+          overflow-x: scroll;
+          overflow-y: hidden;
+          border: 2px solid #333;
+          border-radius: 10px;
+          box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+          cursor: grab;
+          transition: transform 0.3s ease-in-out;
+      
+          .img-container {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            margin-inline: auto;
-            overflow-x: scroll;
-            overflow-y: hidden;
-            border: 2px solid #808080;
-            border-radius: 10px;
-            box-shadow: 0px 0px 0.4176px 0px #FFF,
-                0px 0px 0.8352px 0px #FFF,
-                0px 0px 2.9232px 0px #FFF,
-                0px 0px 5.8464px 0px #FFF,
-                0px 0px 10.0224px 0px #FFF,
-                0px 0px 17.5392px 0px #FFF;
-
-            .img-container {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                height: 90%;
-                width: 200px;
-                margin-right: 55px;
-                margin-top: auto;
-                background: #2D0080;
-                padding: 25px;
-                border-radius: 20px;
-
-                &:last-child {
-                    margin-right: 0;
-                }
-
-                .skill-logo {
-                    margin-bottom: auto;
-                    height: 50%;
-                    width: clamp(85px, 150px, 250px);
-                    transition: transform 0.3s ease-in-out;
-                }
-
-                .logo-name {
-                    margin-bottom: auto;
-                    color: $defaultTextColor;
-                    font-family: $defaultFont;
-                    font-weight: 700;
-                    font-size: 1.5rem;
-                }
-
-                .flask {
-                    padding: 5px;
-                    border-radius: 10px;
-                    background: #FFF;
-                }
+            height: 70%;
+            width: 200px;
+            margin-right: 55px;
+            margin-left: auto;
+            background: #444; /* Container background color */
+            padding: 25px;
+            border-radius: 20px;
+            transition: background-color 0.3s ease-in-out; /* Hover effect */
+      
+            &:last-child {
+              margin-right: 0;
             }
+      
+            .skill-logo {
+              margin-bottom: auto;
+              height: 50%;
+              width: clamp(85px, 150px, 250px);
+              transition: transform 0.3s ease-in-out;
+            }
+      
+            .logo-name {
+              margin-bottom: auto;
+              color: #fff;
+              font-family: $defaultFont, sans-serif;
+              font-weight: 700;
+              font-size: 1.5rem;
+            }
+      
+            &.flask {
+              .skill-logo {
+                border-radius: 10px;
+                background: #00a5cf;
+                padding: 5px;
+              }
+      
+              &:hover {
+                background: #0094b0;
+              }
+            }
+      
+            &:hover {
+              background: #555;
+            }
+          }
+      
+          &::-webkit-scrollbar {
+            width: 10px;
+          }
+      
+          &::-webkit-scrollbar-thumb {
+            background: #666;
+            border-radius: 5px;
+          }
+      
+          &::-webkit-scrollbar-track {
+            background: #333;
+          }
         }
-
-    }
+      }
+      
+            
 
 
 
     footer {
+        overflow-x: hidden;
+        position: relative;
         background: $footerBackgroundColor;
 
         #footer-container1,
@@ -371,6 +398,13 @@ body {
             }
         }
     }
+}
+
+.svgpart {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateY(-5px) scaleX(1.01);
 }
 
 @keyframes scroll-animation {

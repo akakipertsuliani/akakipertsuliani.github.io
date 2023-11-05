@@ -21,9 +21,35 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     })
 
-    // window.addEventListener("loadstart", () => {
-    //     console.log("Nice");
-    // })
+    const carousel = document.querySelector(".skill-container");
+    let isDragging = false;
+    let startX, scrollLeft;
+
+    carousel.addEventListener("mousedown", (e) => {
+        isDragging = true;
+        startX = e.pageX - carousel.offsetLeft;
+        scrollLeft = carousel.scrollLeft;
+    });
+
+    carousel.addEventListener("mouseleave", () => {
+        carousel.style = "cursor: grab;"
+        isDragging = false;
+    });
+
+    carousel.addEventListener("mouseup", () => {
+        carousel.style = "cursor: grab;"
+        isDragging = false;
+    });
+
+    carousel.addEventListener("mousemove", (e) => {
+        if (!isDragging) return;
+        e.preventDefault();
+        carousel.style = "cursor: grabbing;"
+        const x = e.pageX - carousel.offsetLeft;
+        const walk = (x - startX) * 5; 
+        carousel.scrollLeft = scrollLeft - walk;
+    });
+
 
 });
 
