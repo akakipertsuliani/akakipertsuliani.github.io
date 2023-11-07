@@ -6,7 +6,7 @@
     justify-content: space-between;
     align-items: center;
     background: #066F0162;
-    z-index: 999;
+    z-index: 4;
     transition: top 0.3s;
 }
 

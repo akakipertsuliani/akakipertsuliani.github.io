@@ -12,7 +12,10 @@
     background-clip: text;
   }
   .wrapper #about {
-    flex-direction: column-reverse;
+    flex-direction: column;
+  }
+  .wrapper #about .my-image {
+    width: 90%;
   }
   .wrapper #about #about-text-container {
     padding: 10px 20px;
@@ -30,6 +33,13 @@
   }
   .wrapper #about #about-text-container .emoji {
     font-size: 1rem;
+  }
+  .wrapper #skill .skill-container {
+    display: inline-flex;
+    padding: 0;
+  }
+  .wrapper #skill .skill-container .img-container {
+    width: 380px;
   }
   .wrapper footer {
     display: flex;

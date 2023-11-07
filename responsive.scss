@@ -24,7 +24,11 @@
         }
 
         #about {
-            flex-direction: column-reverse;
+            flex-direction: column;
+
+            .my-image {
+                width: 90%;
+            }
 
             #about-text-container {
                 padding: 10px 20px;
@@ -47,6 +51,16 @@
                     font-size: 1rem;
                 }
 
+            }
+        }
+
+        #skill {
+            .skill-container {
+                display: inline-flex;
+                padding: 0;
+                .img-container {
+                    width: 380px;
+                }
             }
         }
 

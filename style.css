@@ -14,6 +14,81 @@ body {
   overflow-x: hidden;
 }
 
+.loader-page {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 5;
+  width: 100vw;
+  height: 100vh;
+  background: #011B3D;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader-page .loader {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  background: transparent;
+  border-radius: 50%;
+  box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.5490196078);
+  border: 1px solid #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.loader-page .loader::before {
+  content: "";
+  position: absolute;
+  inset: 20px;
+  background: transparent;
+  border: 1px dashed #444;
+  border-radius: 50%;
+  box-shadow: inset -5px -5px 25px rgba(0, 0, 0, 0.2509803922), inset 5px 5px 35px rgba(0, 0, 0, 0.2509803922);
+}
+.loader-page .loader::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px dashed #444;
+  box-shadow: inset -5px -5px 25px rgba(0, 0, 0, 0.2509803922), inset 5px 5px 35px rgba(0, 0, 0, 0.2509803922);
+}
+.loader-page .loader span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  background: transparent;
+  transform-origin: top left;
+  animation: radar81 2s linear infinite;
+  border-top: 1px dashed #FFF;
+}
+.loader-page .loader span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: seagreen;
+  transform-origin: top left;
+  transform: rotate(-55deg);
+  filter: blur(30px) drop-shadow(20px 20px 20px #2E8B57);
+}
+@keyframes radar81 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .wrapper {
   width: 100%;
   display: flex;
@@ -95,13 +170,16 @@ body {
   justify-content: space-evenly;
   align-items: center;
   background: #2A3F65;
+  z-index: 0;
 }
 .wrapper #about .my-image {
   width: 30%;
   height: 50%;
   border-radius: 50%/20px;
+  z-index: -2;
 }
 .wrapper #about #about-text-container {
+  z-index: 1;
   width: 40%;
   height: 50%;
   padding: 1vh 2vw;
@@ -135,83 +213,120 @@ body {
 .wrapper #skill {
   position: relative;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: start;
   align-items: center;
   background: #000;
+  z-index: 0;
 }
-.wrapper #skill .skill-container {
+.wrapper #skill .skill-wrapper {
   position: relative;
-  background: #222;
-  height: 40vh;
-  width: 70vw;
+  z-index: 1;
+  width: 90%;
+  margin-top: 20vh;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  margin: 0 auto;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  border: 2px solid #333;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-  cursor: grab;
-  transition: transform 0.3s ease-in-out;
 }
-.wrapper #skill .skill-container .img-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 70%;
-  width: 200px;
-  margin-right: 55px;
-  margin-left: auto;
-  background: #444; /* Container background color */
-  padding: 25px;
+.wrapper #skill .skill-wrapper .text-over-container {
+  position: absolute;
+  width: 100%;
+  height: 70px;
   border-radius: 20px;
-  transition: background-color 0.3s ease-in-out; /* Hover effect */
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  cursor: pointer;
 }
-.wrapper #skill .skill-container .img-container:last-child {
-  margin-right: 0;
+.wrapper #skill .skill-wrapper .text-over-container .text-over {
+  color: #FFF;
+  font-family: monospace;
+  font-weight: bold;
 }
-.wrapper #skill .skill-container .img-container .skill-logo {
-  margin-bottom: auto;
-  height: 50%;
-  width: 150px;
-  transition: transform 0.3s ease-in-out;
-}
-.wrapper #skill .skill-container .img-container .logo-name {
-  margin-bottom: auto;
-  color: #fff;
-  font-family: monospace, sans-serif;
-  font-weight: 700;
+.wrapper #skill .skill-wrapper .text-over-container .fa-solid {
   font-size: 1.5rem;
+  transition: transform 0.4s;
 }
-.wrapper #skill .skill-container .img-container.flask .skill-logo {
-  border-radius: 10px;
-  background: #00a5cf;
-  padding: 5px;
+.wrapper #skill .skill-wrapper .button-box {
+  position: relative;
+  background: transparent;
+  border-radius: 20px;
+  border: 2px solid #FFF;
+  width: 25%;
+  height: 70px;
+  transition: 0.3s;
 }
-.wrapper #skill .skill-container .img-container.flask:hover {
-  background: #0094b0;
-}
-.wrapper #skill .skill-container .img-container:hover {
-  background: #555;
-}
-.wrapper #skill .skill-container::-webkit-scrollbar {
-  width: 10px;
-}
-.wrapper #skill .skill-container::-webkit-scrollbar-thumb {
-  background: #666;
-  border-radius: 5px;
-}
-.wrapper #skill .skill-container::-webkit-scrollbar-track {
+.wrapper #skill .skill-wrapper .button-box .img-container {
+  position: absolute;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px;
   background: #333;
+  opacity: 0;
+  transition: 0.5s;
+  transform: translateY(120%);
+}
+.wrapper #skill .skill-wrapper .button-box .img-container .img-box {
+  width: 60px;
+  height: 60px;
+  background: #FFF;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 25px;
+}
+.wrapper #skill .skill-wrapper .button-box .img-container .img-box .skill-logo {
+  width: 40px;
+  height: 35px;
+}
+.wrapper #skill .skill-wrapper .button-box .img-container .logo-name {
+  font-size: 1.5rem;
+  font-family: monospace;
+  font-weight: bold;
+  color: #FFF;
+  margin-right: 40px;
+}
+.wrapper #skill .skill-wrapper .button-box1:hover {
+  border-color: transparent;
+  background: #0066FF;
+  box-shadow: 0 0 10px 5px #0066FF;
+}
+.wrapper #skill .skill-wrapper .button-box1:active {
+  background: #B700FF;
+  box-shadow: 0 0 10px 5px #B700FF;
+}
+.wrapper #skill .skill-wrapper .button-box2:hover {
+  border-color: transparent;
+  background: #00FF0D;
+  box-shadow: 0 0 10px 5px #00FF0D;
+}
+.wrapper #skill .skill-wrapper .button-box2:active {
+  background: #B700FF;
+  box-shadow: 0 0 10px 5px #B700FF;
+}
+.wrapper #skill .skill-wrapper .button-box3:hover {
+  border-color: transparent;
+  background: #8C00FF;
+  box-shadow: 0 0 10px 5px #8C00FF;
+}
+.wrapper #skill .skill-wrapper .button-box3:active {
+  background: #B700FF;
+  box-shadow: 0 0 10px 5px #B700FF;
 }
 .wrapper footer {
   overflow-x: hidden;
   position: relative;
+  z-index: 0;
   background: #0C0B0B;
 }
 .wrapper footer #footer-container1,
 .wrapper footer #footer-container2 {
+  position: relative;
+  z-index: 1;
   width: 50%;
   height: 90vh;
   display: flex;
@@ -331,6 +446,7 @@ body {
   position: absolute;
   left: 0;
   top: 0;
+  z-index: -1;
   transform: translateY(-5px) scaleX(1.01);
 }
 

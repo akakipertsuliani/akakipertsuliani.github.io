@@ -14,10 +14,17 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="responsiveStyle.css">
-    <title>portfolio</title> 
+    <title>portfolio</title>
 </head>
 
 <body>
+
+    <div class="loader-page">
+        <div class="loader">
+            <span></span>
+        </div>
+    </div>
+
     <header id="header">
         <img src="img/logo.svg" alt="Akaki" id="logo">
         <nav id="nav-container">
@@ -39,13 +46,14 @@
                     <h2>My name is Akaki</h2>
                     <div class="skill-texts">
                         <h3>I am
-                        <div class="skill-text-conatiner">
-                            <span class="skill-text">Front-End</span>
-                            <span class="skill-text">Back-End</span>
-                            <span class="skill-text">React</span>
-                            <span class="skill-text">Python</span>
-                        </div>
-                        Developer</h3>
+                            <div class="skill-text-conatiner">
+                                <span class="skill-text">Front-End</span>
+                                <span class="skill-text">Back-End</span>
+                                <span class="skill-text">React</span>
+                                <span class="skill-text">Python</span>
+                            </div>
+                            Developer
+                        </h3>
                     </div>
                 </div>
             </div>
@@ -54,7 +62,7 @@
 
         <section id="about">
             <img src="svgPart/section2join.svg" alt="svg" width="100%" class="svgpart">
-            <img src="img/myImage.png" alt="Akaki" class="my-image">
+            <img src="img/myImage.jpg" alt="Akaki" class="my-image">
             <div id="about-text-container">
                 <p class="header">Hello! <span class="emoji">👋</span> I'm Akaki, a developer with 4 years of
                     experience in
@@ -74,41 +82,75 @@
         <section id="skill">
             <img src="svgPart/section3join.svg" alt="svg" width="100%" class="svgpart">
             <div class="skill-wrapper">
-                <div class="skill-container">
-                    <div class="img-container">
-                        <img src="img/logos/htmlLogo.png" alt="HTML" class="skill-logo">
+                <div class="button-box button-box1">
+                    <div class="text-over-container">
+                        <h1 class="text-over">Front-End</h1>
+                        <i class="fa-solid fa-arrow-up" style="color: #ffffff;"></i>
+                    </div>
+                    <div class="img-c-1 img-container">
+                        <div class="img-box">
+                            <img src="img/logos/htmlLogo.png" alt="HTML" class="skill-logo">
+                        </div>
                         <p class="logo-name">HTML</p>
                     </div>
-                    <div class="img-container">
-                        <img src="img/logos/cssLogo.png" alt="CSS" class="skill-logo">
+                    <div class="img-c-1 img-container">
+                        <div class="img-box">
+                            <img src="img/logos/cssLogo.png" alt="CSS" class="skill-logo">
+                        </div>
                         <p class="logo-name">CSS</p>
                     </div>
-                    <div class="img-container">
-                        <img src="img/logos/jsLogo.png" alt="JS" class="skill-logo">
+                    <div class="img-c-1 img-container">
+                        <div class="img-box">
+                            <img src="img/logos/jsLogo.png" alt="JS" class="skill-logo">
+                        </div>
                         <p class="logo-name">JavaScript</p>
                     </div>
-                    <div class="img-container">
-                        <img src="img/logos/reactLogo.png" alt="REACT" class="skill-logo">
+                    <div class="img-c-1 img-container">
+                        <div class="img-box">
+                            <img src="img/logos/reactLogo.png" alt="REACT" class="skill-logo">
+                        </div>
                         <p class="logo-name">React</p>
                     </div>
-                    <div class="img-container">
-                        <img src="img/logos/vueLogo.png" alt="VUEJS" class="skill-logo">
+                    <div class="img-c-1 img-container">
+                        <div class="img-box">
+                            <img src="img/logos/vueLogo.png" alt="VUEJS" class="skill-logo">
+                        </div>
                         <p class="logo-name">Vue</p>
                     </div>
-                    <div class="img-container">
-                        <img src="img/logos/pythonLogo.png" alt="PYTHON" class="skill-logo">
-                        <p class="logo-name">Python</p>
+                </div>
+                <div class="button-box button-box2">
+                    <div class="text-over-container">
+                        <h1 class="text-over">Back-End</h1>
+                        <i class="fa-solid fa-arrow-up" style="color: #ffffff;"></i>
                     </div>
-                    <div class="img-container">
-                        <img src="img/logos/djangoLogo.png" alt="DJANGO" class="skill-logo">
+                    <div class="img-c-2 img-container">
+                        <div class="img-box">
+                            <img src="img/logos/nodeLogo.png" alt="NODE" class="skill-logo">
+                        </div>
+                        <p class="logo-name">Nodejs</p>
+                    </div>
+                    <div class="img-c-2 img-container">
+                        <div class="img-box">
+                            <img src="img/logos/djangoLogo.png" alt="DJANGO" class="skill-logo">
+                        </div>
                         <p class="logo-name">Django</p>
                     </div>
-                    <div class="img-container">
-                        <img src="img/logos/flaskLogo.png" alt="FLASK" class="skill-logo flask">
+                    <div class="img-c-2 img-container">
+                        <div class="img-box">
+                            <img src="img/logos/flaskLogo.png" alt="FLASK" class="skill-logo flask">
+                        </div>
                         <p class="logo-name">Flask</p>
                     </div>
-                    <div class="img-container">
-                        <img src="img/logos/pygameLogo.png" alt="PYGAME" class="skill-logo">
+                </div>
+                <div class="button-box button-box3">
+                    <div class="text-over-container">
+                        <h1 class="text-over">Game Dev</h1>
+                        <i class="fa-solid fa-arrow-up" style="color: #ffffff;"></i>
+                    </div>
+                    <div class="img-c-3 img-container">
+                        <div class="img-box">
+                            <img src="img/logos/pygameLogo.png" alt="PYGAME" class="skill-logo">
+                        </div>
                         <p class="logo-name">Pygame</p>
                     </div>
                 </div>
