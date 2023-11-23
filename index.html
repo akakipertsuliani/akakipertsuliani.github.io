@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="This is my portfolio where you can learn about me, view my skills, and easily contact me. Simply enter your name, email, write your message, and click the send button.">
     <script src="https://cdn.jsdelivr.net/npm/kute.js@2.2.4/dist/kute.min.js"></script>
@@ -12,7 +12,6 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" href="img/facicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="responsiveStyle.css">
     <title>portfolio</title>
 </head>
@@ -25,145 +24,146 @@
         </div>
     </div>
 
-    <header id="header">
-        <img src="img/logo.svg" alt="Akaki" id="logo">
-        <nav id="nav-container">
-            <ul id="list-container">
-                <li class="list"><a href="#" class="element">Home</a></li>
-                <li class="list"><a href="#about" class="element">About</a></li>
-                <li class="list"><a href="#skill" class="element">Skill</a></li>
-                <li class="list"><a href="#contact" class="element">Contact</a></li>
-            </ul>
-        </nav>
-        <i id="menu-bar" class="fa-solid fa-bars" style="color: #FFF;"></i>
+    <header class="header">
+        <div class="header-wrapper">
+            <img src="img/logo.svg" alt="logo" class="logo">
+            <nav class="nav-bar">
+                <a href="#" class="element"><i class="fas fa-home"></i>&nbsp;Home</a>
+                <a href="#section2" class="element"><i class="fas fa-info-circle"></i>&nbsp;About</a>
+                <a href="#section3" class="element"><i class="fas fa-code"></i>&nbsp;Skill</a>
+                <a href="#section4" class="element"><i class="fas fa-envelope"></i>&nbsp;Contact</a>
+                <img src="svgPart/logoIcon.svg" alt="logoIcon" id="logoIcon" width="40%">
+            </nav>
+            <div class="menu-bar">
+                <i class="fa-solid fa-bars" style="color: #FFF;"></i>
+            </div>
+        </div>
     </header>
 
-    <div class="wrapper">
-        <section id="section1">
-            <div class="wellcome-text-container">
-                <div class="container">
-                    <h1 id="wellcome-text"></h1>
-                    <h2>My name is Akaki</h2>
-                    <div class="skill-texts">
-                        <h3>I am
-                            <div class="skill-text-conatiner">
-                                <span class="skill-text">Front-End</span>
-                                <span class="skill-text">Back-End</span>
-                                <span class="skill-text">React</span>
-                                <span class="skill-text">Python</span>
-                            </div>
-                            Developer
-                        </h3>
+    <section class="section" id="section1">
+        <div class="section1-wrapper">
+            <div class="welcome-text-container">
+                <h1 class="welcome-text text1">Hello, world</h1>
+                <h2 class="welcome-text text2">My name is Akaki</h2>
+                <h3 class="welcome-text text3">I am
+                    <div class="skill-text">
+                        <p class="skill-name">Front-End</p>
+                        <p class="skill-name">Back-End</p>
+                        <p class="skill-name">Game</p>
                     </div>
-                </div>
+                    Developer
+                </h3>
             </div>
-        </section>
+            <img src="img/myImageStart.jpg" loading="lazy" alt="Akaki" class="my-image1">
+        </div>
+    </section>
 
-
-        <section id="about">
-            <img src="svgPart/section2join.svg" alt="svg" width="100%" class="svgpart">
-            <img src="img/myImage.jpg" alt="Akaki" class="my-image">
-            <div id="about-text-container">
-                <p class="header">Hello! <span class="emoji">👋</span> I'm Akaki, a developer with 4 years of
-                    experience in
+    <section class="section" id="section2">
+        <div class="section2-wrapper">
+            <img src="img/myImage.jpg" loading="lazy" alt="Akaki" class="my-image2">
+            <div class="about-text-container">
+                <h1 class="part first-part">
+                    Hello! 👋 I'm Akaki, a developer with 4 years of experience in
                     both front-end and back-end development.
-                </p>
-                <p class="paragraph">I also have a knack for creating games and applications using Python, as well as
-                    using
-                    React to craft
-                    apps for iOS and Android. <span class="emoji">📱</span></p>
-                <p class="emphasis">I'm excited to help turn your app dreams into a reality! Let's bring your ideas to
-                    life
-                    and see them in
-                    action. <span class="emoji">🚀</span></p>
+                </h1>
+                <h2 class="part second-part">
+                    I also have a knack for creating games and applications using Python,
+                    as well as using React to craft apps for iOS and Android. 📱
+                </h2>
+                <h3 class="part three-part">
+                    I'm excited to help turn your app dreams into a reality!
+                    Let's bring your ideas to life and see them in action. 🚀
+                </h3>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="skill">
-            <img src="svgPart/section3join.svg" alt="svg" width="100%" class="svgpart">
-            <div class="skill-wrapper">
-                <div class="button-box button-box1">
-                    <div class="text-over-container">
-                        <h1 class="text-over">Front-End</h1>
-                        <i class="fa-solid fa-arrow-up" style="color: #ffffff;"></i>
-                    </div>
-                    <div class="img-c-1 img-container">
-                        <div class="img-box">
-                            <img src="img/logos/htmlLogo.png" alt="HTML" class="skill-logo">
-                        </div>
-                        <p class="logo-name">HTML</p>
-                    </div>
-                    <div class="img-c-1 img-container">
-                        <div class="img-box">
-                            <img src="img/logos/cssLogo.png" alt="CSS" class="skill-logo">
-                        </div>
-                        <p class="logo-name">CSS</p>
-                    </div>
-                    <div class="img-c-1 img-container">
-                        <div class="img-box">
-                            <img src="img/logos/jsLogo.png" alt="JS" class="skill-logo">
-                        </div>
-                        <p class="logo-name">JavaScript</p>
-                    </div>
-                    <div class="img-c-1 img-container">
-                        <div class="img-box">
-                            <img src="img/logos/reactLogo.png" alt="REACT" class="skill-logo">
-                        </div>
-                        <p class="logo-name">React</p>
-                    </div>
-                    <div class="img-c-1 img-container">
-                        <div class="img-box">
-                            <img src="img/logos/vueLogo.png" alt="VUEJS" class="skill-logo">
-                        </div>
-                        <p class="logo-name">Vue</p>
-                    </div>
+    <section class="section" id="section3">
+        <img src="svgPart/wave.svg" alt="wave" loading="lazy" width="100%" id="wave">
+        <div class="section3-wrapper">
+            <div class="main-container">
+                <div class="drop-down-button">
+                    <h1 class="global-skill-text">Front-End</h1>
+                    <i id="first" class="fa-solid fa-arrow-up" style="color: #FFF;"></i>
                 </div>
-                <div class="button-box button-box2">
-                    <div class="text-over-container">
-                        <h1 class="text-over">Back-End</h1>
-                        <i class="fa-solid fa-arrow-up" style="color: #ffffff;"></i>
+                <div class="imgs-left skill-container">
+                    <div class="img-box">
+                        <img src="img/logos/htmlLogo.png" loading="lazy" alt="HTML" class="skill-logo">
                     </div>
-                    <div class="img-c-2 img-container">
-                        <div class="img-box">
-                            <img src="img/logos/nodeLogo.png" alt="NODE" class="skill-logo">
-                        </div>
-                        <p class="logo-name">Nodejs</p>
-                    </div>
-                    <div class="img-c-2 img-container">
-                        <div class="img-box">
-                            <img src="img/logos/djangoLogo.png" alt="DJANGO" class="skill-logo">
-                        </div>
-                        <p class="logo-name">Django</p>
-                    </div>
-                    <div class="img-c-2 img-container">
-                        <div class="img-box">
-                            <img src="img/logos/flaskLogo.png" alt="FLASK" class="skill-logo flask">
-                        </div>
-                        <p class="logo-name">Flask</p>
-                    </div>
+                    <h1 class="skill-text">HTML</h1>
                 </div>
-                <div class="button-box button-box3">
-                    <div class="text-over-container">
-                        <h1 class="text-over">Game Dev</h1>
-                        <i class="fa-solid fa-arrow-up" style="color: #ffffff;"></i>
+                <div class="imgs-left skill-container">
+                    <div class="img-box">
+                        <img src="img/logos/cssLogo.png" loading="lazy" alt="CSS" class="skill-logo">
                     </div>
-                    <div class="img-c-3 img-container">
-                        <div class="img-box">
-                            <img src="img/logos/pygameLogo.png" alt="PYGAME" class="skill-logo">
-                        </div>
-                        <p class="logo-name">Pygame</p>
+                    <h1 class="skill-text">CSS</h1>
+                </div>
+                <div class="imgs-left skill-container">
+                    <div class="img-box">
+                        <img src="img/logos/jsLogo.png" loading="lazy" alt="JS" class="skill-logo">
                     </div>
+                    <h1 class="skill-text">JavaScript</h1>
+                </div>
+                <div class="imgs-left skill-container">
+                    <div class="img-box">
+                        <img src="img/logos/reactLogo.png" loading="lazy" alt="React" class="skill-logo">
+                    </div>
+                    <h1 class="skill-text">React</h1>
+                </div>
+                <div class="imgs-left skill-container">
+                    <div class="img-box">
+                        <img src="img/logos/vueLogo.png" loading="lazy" alt="Vue" class="skill-logo">
+                    </div>
+                    <h1 class="skill-text">Vue</h1>
                 </div>
             </div>
-        </section>
+            <div class="main-container">
+                <div class="drop-down-button">
+                    <h1 class="global-skill-text">Back-End</h1>
+                    <i id="second" class="fa-solid fa-arrow-up" style="color: #FFF;"></i>
+                </div>
+                <div class="imgs-middle skill-container">
+                    <div class="img-box">
+                        <img src="img/logos/nodeLogo.png" loading="lazy" alt="NODE" class="skill-logo">
+                    </div>
+                    <h1 class="skill-text">NodeJS</h1>
+                </div>
+                <div class="imgs-middle skill-container">
+                    <div class="img-box">
+                        <img src="img/logos/djangoLogo.png" loading="lazy" alt="DJANGO" class="skill-logo">
+                    </div>
+                    <h1 class="skill-text">Django</h1>
+                </div>
+                <div class="imgs-middle skill-container">
+                    <div class="img-box">
+                        <img src="img/logos/flaskLogo.png" loading="lazy" alt="FLASK" class="skill-logo">
+                    </div>
+                    <h1 class="skill-text">Flask</h1>
+                </div>
+            </div>
+            <div class="main-container">
+                <div class="drop-down-button">
+                    <h1 class="global-skill-text">Game-Dev</h1>
+                    <i id="three" class="fa-solid fa-arrow-up" style="color: #FFF;"></i>
+                </div>
+                <div class="imgs-right skill-container">
+                    <div class="img-box">
+                        <img src="img/logos/pygameLogo.png" loading="lazy" alt="PYGAME" class="skill-logo">
+                    </div>
+                    <h1 class="skill-text">Pygame</h1>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <footer id="contact">
-            <img src="svgPart/section4join.svg" alt="svg" width="100%" class="svgpart">
-            <div id="footer-container1">
-                <div class="contact-text-container">
-                    <h1>Contact Me</h1>
-                    <p><i class="fa-solid fa-envelope" style="color: #9141AC;"></i>akaki@kopitnari.net</p>
-                    <div class="personal-contact">
+    <footer class="section" id="section4">
+        <div class="section4-wrapper">
+            <div class="side-container left">
+                <div class="ryw23-2">
+                    <h1 class="contact-text">Contact Me</h1>
+                    <h2 class="email"><i class="fa-solid fa-envelope" style="color: #813D9C;"></i>&nbsp;
+                        akaki@kopitnari.net</h2>
+                    <div class="icon-container">
                         <a href="https://github.com/akakipertsuliani" target="_blank"><i class="fa-brands fa-github"
                                 style="color: #FFF;"></i></a>
                         <a href="https://facebook.com/akaki.ferculiani.12" target="_blank"><i
@@ -171,24 +171,21 @@
                     </div>
                 </div>
             </div>
-            <div id="footer-container2">
-                <div class="form-container">
-                    <form name="submit-to-google-sheet">
-                        <input name="Name" type="text" id="name-field" class="input-field" placeholder="Your Name"
-                            required>
-                        <input name="Email" type="email" id="email-field" class="input-field" placeholder="Your Email"
-                            required>
-                        <textarea name="Message" id="message-field" class="input-field" rows="10"
-                            placeholder="Your Message" required></textarea>
-                        <div class="send-area">
-                            <input type="submit" id="submit-button" value="Send">
-                            <p id="response"></p>
-                        </div>
-                    </form>
-                </div>
+            <div class="side-container right">
+                <form name="submit-to-google-sheet">
+                    <input name="Name" type="text" id="name-field" class="input-field" placeholder="Your Name" required>
+                    <input name="Email" type="email" id="email-field" class="input-field" placeholder="Your Email"
+                        required>
+                    <textarea name="Message" id="message-field" rows="10" placeholder="Your Message"
+                        required></textarea>
+                    <div class="send-area">
+                        <input type="submit" id="submit-button" value="Send">
+                        <p id="response"></p>
+                    </div>
+                </form>
             </div>
-        </footer>
-    </div>
+        </div>
+    </footer>
 
     <script src="contactScript.js"></script>
     <script src="script.js"></script>

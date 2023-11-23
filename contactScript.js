@@ -7,9 +7,9 @@ form.addEventListener('submit', e => {
 
     fetch(scriptURL, { method: 'POST', body: new FormData(form) })
         .then(response => {
-            document.getElementById("response").innerHTML = "Succesfuly send"
+            document.getElementById("response").innerHTML = "Send Succesfuly🤩"
             setTimeout(() => {
                 document.getElementById("response").innerHTML = "";
             }, 3500);
-        }).catch(error => document.getElementById("response").innerHTML = "Please try again");
+        }).catch(error => document.getElementById("response").innerHTML = "Please Try Again😘");
 });

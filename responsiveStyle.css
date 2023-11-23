@@ -1,72 +1,77 @@
-@media screen and (max-width: 768px) {
-  .wrapper #section1 {
-    height: 50vh;
-    padding-block: 170px;
+@media screen and (min-width: 768px) {
+  .header .header-wrapper .nav-bar .element:hover {
+    background: #447E395B;
+    color: #48FF00;
+    transform: scale(1.2);
   }
-  .wrapper #section1 .wellcome-text-container {
-    width: 100%;
+
+  .drop-down-button:hover {
+    box-shadow: 0 0 10px 5px #FFF;
   }
-  .wrapper #section1 .wellcome-text-container .container .skill-texts h3 .skill-text-conatiner .skill-text {
-    background: linear-gradient(90deg, #833AB4 0%, #FD1D1D 45%, #FCB045 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-  }
-  .wrapper #about {
-    flex-direction: column;
-  }
-  .wrapper #about .my-image {
-    width: 90%;
-  }
-  .wrapper #about #about-text-container {
-    padding: 10px 20px;
-    width: 80%;
-    height: 40%;
-  }
-  .wrapper #about #about-text-container .header {
-    font-size: 1rem;
-  }
-  .wrapper #about #about-text-container .paragraph {
-    font-size: 1rem;
-  }
-  .wrapper #about #about-text-container .emphasis {
-    font-size: 1rem;
-  }
-  .wrapper #about #about-text-container .emoji {
-    font-size: 1rem;
-  }
-  .wrapper #skill .skill-container {
-    display: inline-flex;
-    padding: 0;
-  }
-  .wrapper #skill .skill-container .img-container {
-    width: 380px;
-  }
-  .wrapper footer {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-  .wrapper footer #footer-container1,
-  .wrapper footer #footer-container2 {
-    width: 100%;
-    height: 50dvh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .wrapper footer #footer-container1 {
-    display: flex;
-    justify-content: end;
-  }
-  .wrapper footer #footer-container1 .contact-text-container {
-    width: 80%;
-    row-gap: 20px;
-  }
-  .wrapper footer #footer-container2 form {
-    width: 100%;
-    margin-left: 0;
+
+  .icon-container a:hover {
+    transform: scale(1.3);
   }
 }
 
-/*# sourceMappingURL=responsiveStyle.css.map */
+@media screen and (max-width: 768px) {
+  .header .header-wrapper .nav-bar {
+    position: absolute;
+    width: 100vw;
+    height: 30vh;
+    left: 0;
+    top: 10vh;
+    margin: 0;
+    background: green;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 10px;
+    transform: translateX(100%);
+    transition: transform 0.4s;
+  }
+
+  .header .header-wrapper .nav-bar #logoIcon {
+    display: block;
+  }
+
+  .header .header-wrapper .menu-bar {
+    display: block;
+    transition: transform 0.4s;
+  }
+
+  .header .header-wrapper .menu-bar:active {
+    transform: scale(0.9);
+  }
+
+  .element {
+    width: 30%;
+    border: 5px solid gray;
+  }
+
+  .section1-wrapper {
+    flex-direction: column-reverse;
+  }
+
+  .welcome-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateY(-20vh);
+  }
+
+  .section4-wrapper {
+    flex-direction: column;
+  }
+
+  #section4 .section4-wrapper .left {
+    height: 20vh;
+  }
+
+  #section4 .section4-wrapper .right {
+    height: 80vh;
+  }
+
+  #section4 .section4-wrapper .side-container form .input-field {
+    height: 20px;
+  }
+}
