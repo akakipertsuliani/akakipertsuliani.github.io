@@ -17,7 +17,6 @@
 </head>
 
 <body>
-
     <div class="loader-page">
         <div class="loader">
             <span></span>
@@ -27,6 +26,12 @@
     <header class="header">
         <div class="header-wrapper">
             <img src="img/logo.svg" alt="logo" class="logo">
+
+            <button class="menu-bar">
+                <i class="fa-solid fa-bars menu" style="color: #FFF;"></i>
+                <i class="fa-solid fa-xmark xmark" style="color: #ffffff;"></i>
+            </button>
+
             <nav class="nav-bar">
                 <a href="#" class="element"><i class="fas fa-home"></i>&nbsp;Home</a>
                 <a href="#section2" class="element"><i class="fas fa-info-circle"></i>&nbsp;About</a>
@@ -34,9 +39,6 @@
                 <a href="#section4" class="element"><i class="fas fa-envelope"></i>&nbsp;Contact</a>
                 <img src="svgPart/logoIcon.svg" alt="logoIcon" id="logoIcon" width="40%">
             </nav>
-            <div class="menu-bar">
-                <i class="fa-solid fa-bars" style="color: #FFF;"></i>
-            </div>
         </div>
     </header>
 
@@ -53,6 +55,7 @@
                     </div>
                     Developer
                 </h3>
+                <a href="#section2">Let's Go</a>
             </div>
             <img src="img/myImageStart.jpg" loading="lazy" alt="Akaki" class="my-image1">
         </div>
@@ -76,84 +79,82 @@
                 </h3>
             </div>
         </div>
+        <a href="#section3" class="continue-button-1">Continue</a>
     </section>
 
     <section class="section" id="section3">
         <img src="svgPart/wave.svg" alt="wave" loading="lazy" width="100%" id="wave">
         <div class="section3-wrapper">
             <div class="main-container">
-                <div class="drop-down-button">
-                    <h1 class="global-skill-text">Front-End</h1>
-                    <i id="first" class="fa-solid fa-arrow-up" style="color: #FFF;"></i>
-                </div>
-                <div class="imgs-left skill-container">
-                    <div class="img-box">
-                        <img src="img/logos/htmlLogo.png" loading="lazy" alt="HTML" class="skill-logo">
+                <div class="drop-down-button-area">
+                    <div class="drop-button">
+                        <button class="drop-">
+                            <i id="first" class="fa-solid fa-arrow-up" style="color: #FFF;"></i>
+                            <h1>Front-End</h1>
+                            <i id="first" class="fa-solid fa-arrow-up" style="color: #FFF;"></i>
+                        </button>
+
+                        <div class="img-box" style="--i:1">
+                            <img src="img/logos/htmlLogo.png" loading="lazy" alt="HTML" class="skill-logo">
+                            <h1 class="skill-text">HTML</h1>
+                        </div>
+                        <div class="img-box" style="--i:2">
+                            <img src="img/logos/cssLogo.png" loading="lazy" alt="CSS" class="skill-logo">
+                            <h1 class="skill-text">CSS</h1>
+                        </div>
+                        <div class="img-box" style="--i:3">
+                            <img src="img/logos/jsLogo.png" loading="lazy" alt="JS" class="skill-logo">
+                            <h1 class="skill-text">JS</h1>
+                        </div>
+                        <div class="img-box" style="--i:4">
+                            <img src="img/logos/reactLogo.png" loading="lazy" alt="React" class="skill-logo">
+                            <h1 class="skill-text">React</h1>
+                        </div>
+                        <div class="img-box" style="--i:5">
+                            <img src="img/logos/vueLogo.png" loading="lazy" alt="Vue" class="skill-logo">
+                            <h1 class="skill-text">Vue</h1>
+                        </div>
                     </div>
-                    <h1 class="skill-text">HTML</h1>
                 </div>
-                <div class="imgs-left skill-container">
-                    <div class="img-box">
-                        <img src="img/logos/cssLogo.png" loading="lazy" alt="CSS" class="skill-logo">
+                <div class="drop-down-button-area">
+                    <div class="drop-button">
+                        <button class="drop-">
+                            <i id="second" class="fa-solid fa-arrow-up" style="color: #FFF;"></i>
+                            <h1>Back-End</h1>
+                            <i id="second" class="fa-solid fa-arrow-up" style="color: #FFF;"></i>
+                        </button>
+
+                        <div class="img-box" style="--i:1">
+                            <img src="img/logos/nodeLogo.png" loading="lazy" alt="NODE" class="skill-logo">
+                            <h1 class="skill-text">NodeJS</h1>
+                        </div>
+                        <div class="img-box" style="--i:2">
+                            <img src="img/logos/djangoLogo.png" loading="lazy" alt="DJANGO" class="skill-logo">
+                            <h1 class="skill-text">Django</h1>
+                        </div>
+                        <div class="img-box" style="--i:3">
+                            <img src="img/logos/flaskLogo.png" loading="lazy" alt="FLASK" class="skill-logo">
+                            <h1 class="skill-text">Flask</h1>
+                        </div>
                     </div>
-                    <h1 class="skill-text">CSS</h1>
                 </div>
-                <div class="imgs-left skill-container">
-                    <div class="img-box">
-                        <img src="img/logos/jsLogo.png" loading="lazy" alt="JS" class="skill-logo">
+                <div class="drop-down-button-area">
+                    <div class="drop-button">
+                        <button class="drop-">
+                            <i id="three" class="fa-solid fa-arrow-up" style="color: #FFF;"></i>
+                            <h1>Game-Dev</h1>
+                            <i id="three" class="fa-solid fa-arrow-up" style="color: #FFF;"></i>
+                        </button>
+
+                        <div class="img-box" style="--i:1">
+                            <img src="img/logos/pygameLogo.png" loading="lazy" alt="PYGAME" class="skill-logo">
+                            <h1 class="skill-text">Pygame</h1>
+                        </div>
                     </div>
-                    <h1 class="skill-text">JavaScript</h1>
-                </div>
-                <div class="imgs-left skill-container">
-                    <div class="img-box">
-                        <img src="img/logos/reactLogo.png" loading="lazy" alt="React" class="skill-logo">
-                    </div>
-                    <h1 class="skill-text">React</h1>
-                </div>
-                <div class="imgs-left skill-container">
-                    <div class="img-box">
-                        <img src="img/logos/vueLogo.png" loading="lazy" alt="Vue" class="skill-logo">
-                    </div>
-                    <h1 class="skill-text">Vue</h1>
-                </div>
-            </div>
-            <div class="main-container">
-                <div class="drop-down-button">
-                    <h1 class="global-skill-text">Back-End</h1>
-                    <i id="second" class="fa-solid fa-arrow-up" style="color: #FFF;"></i>
-                </div>
-                <div class="imgs-middle skill-container">
-                    <div class="img-box">
-                        <img src="img/logos/nodeLogo.png" loading="lazy" alt="NODE" class="skill-logo">
-                    </div>
-                    <h1 class="skill-text">NodeJS</h1>
-                </div>
-                <div class="imgs-middle skill-container">
-                    <div class="img-box">
-                        <img src="img/logos/djangoLogo.png" loading="lazy" alt="DJANGO" class="skill-logo">
-                    </div>
-                    <h1 class="skill-text">Django</h1>
-                </div>
-                <div class="imgs-middle skill-container">
-                    <div class="img-box">
-                        <img src="img/logos/flaskLogo.png" loading="lazy" alt="FLASK" class="skill-logo">
-                    </div>
-                    <h1 class="skill-text">Flask</h1>
-                </div>
-            </div>
-            <div class="main-container">
-                <div class="drop-down-button">
-                    <h1 class="global-skill-text">Game-Dev</h1>
-                    <i id="three" class="fa-solid fa-arrow-up" style="color: #FFF;"></i>
-                </div>
-                <div class="imgs-right skill-container">
-                    <div class="img-box">
-                        <img src="img/logos/pygameLogo.png" loading="lazy" alt="PYGAME" class="skill-logo">
-                    </div>
-                    <h1 class="skill-text">Pygame</h1>
                 </div>
             </div>
         </div>
+        <a href="#section4" class="continue-button-2">Contact Me</a>
     </section>
 
     <footer class="section" id="section4">

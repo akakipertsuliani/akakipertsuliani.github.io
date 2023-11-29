@@ -9,6 +9,9 @@ form.addEventListener('submit', e => {
         .then(response => {
             document.getElementById("response").innerHTML = "Send Succesfuly🤩"
             setTimeout(() => {
+                document.getElementById("name-field").value = "";
+                document.getElementById("email-field").value = "";
+                document.getElementById("message-field").value = "";
                 document.getElementById("response").innerHTML = "";
             }, 3500);
         }).catch(error => document.getElementById("response").innerHTML = "Please Try Again😘");

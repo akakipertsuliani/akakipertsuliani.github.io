@@ -36,11 +36,15 @@
 
   .header .header-wrapper .menu-bar {
     display: block;
-    transition: transform 0.4s;
+    transition: transform 0.4s, opacity 0.4s;
   }
 
   .header .header-wrapper .menu-bar:active {
     transform: scale(0.9);
+  }
+
+  .header .header-wrapper .menu-bar:focus ~ .nav-bar {
+    transform: translate(0);
   }
 
   .element {
