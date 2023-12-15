@@ -3,6 +3,16 @@
 * {
     margin: 0;
     padding: 0;
+
+    @media (prefers-color-scheme: light) {
+        & {
+            filter: brightness(1.2);
+        }
+
+        img {
+            filter: brightness(0.9);
+        }
+    }
 }
 
 html {
@@ -13,6 +23,15 @@ body {
     width: 100vw;
     overflow-x: hidden;
     background: #031029;
+}
+
+.l324defr {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
 .loader-page {
@@ -154,7 +173,7 @@ body {
             position: relative;
             display: none;
             margin-right: 20px;
-            border: none; 
+            border: none;
             background: transparent;
 
             i {
@@ -191,8 +210,10 @@ body {
         justify-content: space-around;
 
         .my-image1 {
+            position: relative;
             width: max(200px, 25vw);
             border-radius: 50%;
+            z-index: -2;
             animation: identifier 15s ease-in-out infinite;
         }
 
@@ -298,8 +319,10 @@ body {
         gap: 30px;
 
         .my-image2 {
+            position: relative;
             width: max(300px, 30%);
             border-radius: 50%/20px;
+            z-index: -2;
             animation: identifier 25s ease-in-out infinite;
         }
 
@@ -451,7 +474,7 @@ body {
 
                     .img-box {
                         position: absolute;
-                        background-color: rgb(65, 46, 46);
+                        background-color: #412E2E;
                         left: 0;
                         top: 120%;
                         width: 80%;
@@ -468,7 +491,7 @@ body {
                             width: 35px;
                             height: 30px;
                             padding: 10px;
-                            background: #FFF;
+                            background: #FFFF00;
                             border-radius: 20%;
                         }
 
@@ -589,44 +612,39 @@ body {
                     resize: none;
                 }
 
-                .send-area {
-                    width: 100%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    flex-direction: column;
-                    row-gap: 5px;
+                #submit-button {
+                    &:disabled {
+                        opacity: 0.5;
+                    }
 
-                    #submit-button {
-                        width: 100%;
-                        height: 40px;
-                        border: none;
-                        border-radius: 10px;
-                        font-size: clamp(16px, 1vw, 20px);
-                        font-family: monospace;
-                        font-weight: 700;
+                    &:disabled:hover {
                         background: #412BFC;
-                        color: #FFF;
-                        outline: transparent;
-                        cursor: pointer;
-                        transition: background-color 0.3s, transform 0.3s;
-
-                        &:hover {
-                            background: #7F24FA;
-                        }
-
-                        &:active {
-                            transform: scale(0.9);
-                        }
                     }
 
-                    #response {
-                        color: #FFF;
-                        font-family: monospace;
-                        font-size: 1.2rem;
-                        font-weight: 700;
+                    &:disabled:active {
+                        transform: scale(1);
                     }
 
+                    width: 100%;
+                    padding-block: 10px;
+                    border: none;
+                    border-radius: 10px;
+                    font-size: clamp(16px, 1vw, 20px);
+                    font-family: monospace;
+                    font-weight: 700;
+                    background: #412BFC;
+                    color: #FFF;
+                    outline: transparent;
+                    cursor: pointer;
+                    transition: background-color 0.3s, transform 0.3s;
+
+                    &:hover {
+                        background: #7F24FA;
+                    }
+
+                    &:active {
+                        transform: scale(0.9);
+                    }
                 }
             }
         }

@@ -3,6 +3,14 @@
   margin: 0;
   padding: 0;
 }
+@media (prefers-color-scheme: light) {
+  * {
+    filter: brightness(1.2);
+  }
+  * img {
+    filter: brightness(0.9);
+  }
+}
 
 html {
   scroll-behavior: smooth;
@@ -12,6 +20,15 @@ body {
   width: 100vw;
   overflow-x: hidden;
   background: #031029;
+}
+
+.l324defr {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 .loader-page {
@@ -176,8 +193,10 @@ body {
   justify-content: space-around;
 }
 #section1 .section1-wrapper .my-image1 {
+  position: relative;
   width: max(200px, 25vw);
   border-radius: 50%;
+  z-index: -2;
   animation: identifier 15s ease-in-out infinite;
 }
 #section1 .section1-wrapper .welcome-text-container {
@@ -269,8 +288,10 @@ body {
   gap: 30px;
 }
 #section2 .section2-wrapper .my-image2 {
+  position: relative;
   width: max(300px, 30%);
   border-radius: 50%/20px;
+  z-index: -2;
   animation: identifier 25s ease-in-out infinite;
 }
 #section2 .section2-wrapper .about-text-container {
@@ -403,7 +424,7 @@ body {
 }
 #section3 .section3-wrapper .main-container .drop-down-button-area .drop-button .img-box {
   position: absolute;
-  background-color: rgb(65, 46, 46);
+  background-color: #412E2E;
   left: 0;
   top: 120%;
   width: 80%;
@@ -420,7 +441,7 @@ body {
   width: 35px;
   height: 30px;
   padding: 10px;
-  background: #FFF;
+  background: #FFFF00;
   border-radius: 20%;
 }
 #section3 .section3-wrapper .main-container .drop-down-button-area .drop-button .img-box .skill-text {
@@ -521,17 +542,9 @@ body {
   height: 20rem;
   resize: none;
 }
-#section4 .section4-wrapper .side-container form .send-area {
+#section4 .section4-wrapper .side-container form #submit-button {
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  row-gap: 5px;
-}
-#section4 .section4-wrapper .side-container form .send-area #submit-button {
-  width: 100%;
-  height: 40px;
+  padding-block: 10px;
   border: none;
   border-radius: 10px;
   font-size: clamp(16px, 1vw, 20px);
@@ -543,17 +556,20 @@ body {
   cursor: pointer;
   transition: background-color 0.3s, transform 0.3s;
 }
-#section4 .section4-wrapper .side-container form .send-area #submit-button:hover {
+#section4 .section4-wrapper .side-container form #submit-button:disabled {
+  opacity: 0.5;
+}
+#section4 .section4-wrapper .side-container form #submit-button:disabled:hover {
+  background: #412BFC;
+}
+#section4 .section4-wrapper .side-container form #submit-button:disabled:active {
+  transform: scale(1);
+}
+#section4 .section4-wrapper .side-container form #submit-button:hover {
   background: #7F24FA;
 }
-#section4 .section4-wrapper .side-container form .send-area #submit-button:active {
+#section4 .section4-wrapper .side-container form #submit-button:active {
   transform: scale(0.9);
-}
-#section4 .section4-wrapper .side-container form .send-area #response {
-  color: #FFF;
-  font-family: monospace;
-  font-size: 1.2rem;
-  font-weight: 700;
 }
 
 @keyframes identifier {
