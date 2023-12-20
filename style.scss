@@ -6,11 +6,7 @@
 
     @media (prefers-color-scheme: light) {
         & {
-            filter: brightness(1.2);
-        }
-
-        img {
-            filter: brightness(0.9);
+            filter: brightness(1);
         }
     }
 }
@@ -38,7 +34,7 @@ body {
     position: relative;
     width: 100vw;
     height: 100vh;
-    z-index: 30;
+    z-index: 999;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -219,7 +215,7 @@ body {
 
         .welcome-text-container {
             font-size: 1.57vw;
-            font-size: clamp(12px, 1.57vw, 30px);
+            font-size: clamp(10px, 1.57vw, 30px);
             color: #FFF;
             font-weight: 700;
             font-family: monospace;
@@ -242,7 +238,7 @@ body {
 
                 .skill-text {
                     height: max(4vh, 4vw);
-                    height: clamp(30px, 4vw, 80px);
+                    height: clamp(25px, 4vw, 80px);
                     overflow: hidden;
 
                     .skill-name {
@@ -261,14 +257,15 @@ body {
                 position: relative;
                 top: 50px;
                 padding: 20px;
-                border: 2px solid purple;
+                border: 2px solid #800080;
                 border-radius: 20px;
                 text-decoration: none;
-                color: rgb(255, 0, 255);
+                color: #FF00FF;
+                font-size: 1.2rem;
                 transition: 0.3s;
 
                 &:hover {
-                    background: purple;
+                    background: #800080;
                     color: #FFF;
                     border-color: transparent;
                 }
@@ -491,7 +488,7 @@ body {
                             width: 35px;
                             height: 30px;
                             padding: 10px;
-                            background: #FFFF00;
+                            background: #FFF;
                             border-radius: 20%;
                         }
 

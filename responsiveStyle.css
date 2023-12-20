@@ -63,16 +63,20 @@
     transform: translateY(-20vh);
   }
 
+  #section4 {
+    height: 130dvh;
+  }
+
   .section4-wrapper {
     flex-direction: column;
   }
 
   #section4 .section4-wrapper .left {
-    height: 20vh;
+    height: 30vh;
   }
 
   #section4 .section4-wrapper .right {
-    height: 80vh;
+    height: 70vh;
   }
 
   #section4 .section4-wrapper .side-container form .input-field {
