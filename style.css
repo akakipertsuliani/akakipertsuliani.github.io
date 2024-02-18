@@ -165,19 +165,11 @@ body {
   font-size: 2rem;
   padding: 5px 15px;
 }
-.header .header-wrapper .menu-bar .xmark {
-  position: absolute;
-  top: 0;
-  left: 2px;
-  z-index: 5;
-  padding: 10px;
-  display: none;
-}
 
 .section {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: max(100vh, 720px);
   display: flex;
   justify-content: center;
 }
@@ -229,7 +221,6 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  animation: slide-animation 4s ease-in-out infinite;
 }
 #section1 .section1-wrapper .welcome-text-container a {
   position: relative;
@@ -457,31 +448,28 @@ body {
 }
 #section4 .section4-wrapper {
   width: min(100%, 1960px);
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 #section4 .section4-wrapper .side-container {
   width: 50%;
-  height: 100%;
+  height: 60vh;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 @media screen and (max-width: 768px) {
   #section4 .section4-wrapper .side-container {
     width: 100%;
-    height: 50%;
+    height: 200px;
+    align-items: center;
   }
 }
 #section4 .section4-wrapper .side-container .ryw23-2 {
-  width: 70%;
-  height: 50%;
+  max-width: 100%;
 }
 #section4 .section4-wrapper .side-container .ryw23-2 .contact-text,
 #section4 .section4-wrapper .side-container .ryw23-2 .email {
-  font-weight: 700;
   color: #FFF;
 }
 #section4 .section4-wrapper .side-container .ryw23-2 .contact-text {
@@ -490,41 +478,50 @@ body {
 }
 #section4 .section4-wrapper .side-container .ryw23-2 .email {
   font-family: sans-serif;
-  font-size: clamp(20px, 2vw, 50px);
+  font-weight: 600;
+  font-size: clamp(20px, 1.5vw, 50px);
 }
 #section4 .section4-wrapper .side-container .ryw23-2 .icon-container {
-  margin-top: 10px;
-  display: flex;
+  margin-top: 20px;
 }
 #section4 .section4-wrapper .side-container .ryw23-2 .icon-container a {
-  font-size: clamp(20px, 2.3vw, 50px);
+  display: flex;
+  text-decoration: none;
+  color: #FFF;
+  font-size: clamp(20px, 1.5vw, 50px);
+  font-family: sans-serif;
+  margin-top: 10px;
   margin-right: 15px;
-  transition: transform 0.3s;
+  transition: 0.3s;
 }
-#section4 .section4-wrapper .side-container .ryw23-2 .icon-container a:hover {
-  transform: scale(1.5);
+#section4 .section4-wrapper .side-container .ryw23-2 .icon-container a:active {
+  color: #412BFC;
+}
+@media screen and (min-width: 768px) {
+  #section4 .section4-wrapper .side-container .ryw23-2 .icon-container a:hover {
+    color: #412BFC;
+  }
 }
 #section4 .section4-wrapper .side-container form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  row-gap: 3%;
-  width: 60%;
-  height: 50%;
+  row-gap: 10px;
+  width: max(60%, 250px);
   padding: 10px 20px;
 }
 @media screen and (max-width: 768px) {
   #section4 .section4-wrapper .side-container form {
-    height: 400px;
-    align-self: flex-start;
+    width: 100%;
   }
 }
 #section4 .section4-wrapper .side-container form #message-field,
 #section4 .section4-wrapper .side-container form .input-field {
-  width: 100%;
+  width: 90%;
   font-size: 16px;
   font-family: monospace;
   font-weight: 700;
+  padding: 15px 20px;
   background: #333;
   color: #FFF;
   border: none;
@@ -532,16 +529,13 @@ body {
   outline: transparent;
 }
 #section4 .section4-wrapper .side-container form .input-field {
-  height: 50px;
-  padding: 15px 20px;
+  height: 20px;
 }
 #section4 .section4-wrapper .side-container form #message-field {
-  padding: 10px 20px;
-  height: 20rem;
   resize: none;
 }
 #section4 .section4-wrapper .side-container form #submit-button {
-  width: 100%;
+  width: 90%;
   padding-block: 10px;
   border: none;
   border-radius: 10px;
@@ -552,7 +546,7 @@ body {
   color: #FFF;
   outline: transparent;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.3s;
+  transition: 0.3s;
 }
 #section4 .section4-wrapper .side-container form #submit-button:disabled {
   opacity: 0.5;
@@ -569,57 +563,27 @@ body {
 #section4 .section4-wrapper .side-container form #submit-button:active {
   transform: scale(0.9);
 }
+@media screen and (max-width: 768px) {
+  #section4 .section4-wrapper .right {
+    height: 500px;
+  }
+}
 
 @keyframes identifier {
   0%, 100% {
     border-radius: 30% 70% 70% 30%/30% 52% 48% 70%;
   }
-  10% {
+  20% {
     border-radius: 50% 50% 20% 80%/25% 80% 20% 75%;
   }
-  20% {
+  40% {
     border-radius: 67% 33% 47% 53%/37% 20% 80% 63%;
   }
-  30% {
-    border-radius: 39% 61% 47% 53%/37% 40% 60% 63%;
-  }
-  40% {
-    border-radius: 39% 61% 82% 18%/74% 40% 60% 26%;
-  }
-  50% {
-    border-radius: 50%;
-  }
   60% {
-    border-radius: 50% 50% 53% 47%/72% 69% 31% 28%;
-  }
-  70% {
-    border-radius: 50% 50% 53% 47%/26% 22% 78% 74%;
+    border-radius: 50%;
   }
   80% {
     border-radius: 50% 50% 53% 47%/26% 69% 31% 74%;
-  }
-  90% {
-    border-radius: 20% 80% 20% 80%/20% 80% 20% 80%;
-  }
-}
-@keyframes slide-animation {
-  0% {
-    transform: translateY(0%);
-  }
-  20% {
-    transform: translateY(0%);
-  }
-  40% {
-    transform: translateY(-100%);
-  }
-  60% {
-    transform: translateY(-100%);
-  }
-  80% {
-    transform: translateY(-200%);
-  }
-  100% {
-    transform: translateY(-200%);
   }
 }
 
